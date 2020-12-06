@@ -43,7 +43,8 @@ export const Card = (props) => {
     }
 
     return (
-        <div style={ cardStyle }>
+        <div id='card' style={ cardStyle }>
+            <div id='forhover'></div>
             <div style={ line }></div>
         </div>
     )
