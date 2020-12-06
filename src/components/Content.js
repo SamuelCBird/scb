@@ -1,15 +1,13 @@
 import React from 'react';
-import { SquareCard } from './SquareCard'
-import { RectangularCard } from './RectangularCard'
+import { Card } from './Card'
 import { DataObjects } from './DataObjects'
 
 export const Content = () => {
     return (
         <div id='content'>
             { DataObjects.map(item => {
-                return <SquareCard data={item} />
+                return <Card data={item} />
             }) }
-            <RectangularCard />
         </div>
     )
 }

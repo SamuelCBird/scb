@@ -3,3 +3,7 @@ export const cats = {
     photo: 'photography',
     prog: 'programming'
 }
+export const cardSize = {
+    square: 'square',
+    rect: 'rectangular'
+}

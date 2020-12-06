@@ -1,7 +1,7 @@
 import React from 'react';
-import { cats } from './DataEnums'
+import { cats, cardSize } from './DataEnums'
 
-export const SquareCard = (props) => {
+export const Card = (props) => {
     const cardStyle = {
         position: 'relative',
         margin: '20px 20px 0 0',
@@ -24,6 +24,7 @@ export const SquareCard = (props) => {
     }
 
     if ( props.data ) {
+        // populate bg image
         cardStyle.backgroundImage = `url(${props.data.bgImage})`;
         if ( props.data.cat === cats.music ) {
             line.backgroundColor = '#A9DCAE';
@@ -31,6 +32,13 @@ export const SquareCard = (props) => {
             line.backgroundColor = '#FEAD73';
         } else {
             line.backgroundColor = '#C893F1';
+        }
+
+        // rect or square
+        if ( props.data.size === cardSize.square ) {
+            cardStyle.width = '160px';
+        } else {
+            cardStyle.width = '200px';
         }
     }
 
