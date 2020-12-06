@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
+import { cats } from './DataEnums'
 
-export const Header = () => {
-    let [activeFilter, setFilter] = useState('scb');
-
+export const Header = (props) => {
     let musicListItem = {
         top: '0',
         borderLeft: '8px solid #A9DCAE'
@@ -16,19 +15,20 @@ export const Header = () => {
         borderLeft: '8px solid #C893F1'
     }
 
-    if ( activeFilter === 'music' ) {
+    if ( props.activeFilter === cats.music ) {
+        
         musicListItem.top = '-10px';
         photographyListItem.top = '0px';
         programmingListItem.top = '0px';
-    } else if ( activeFilter === 'photography' ) {
+    } else if ( props.activeFilter === cats.photo ) {
         musicListItem.top = '0px';
         photographyListItem.top = '-10px';
         programmingListItem.top = '0px';
-    } else if ( activeFilter === 'programming' ) {
+    } else if ( props.activeFilter === cats.prog ) {
         musicListItem.top = '0px';
         photographyListItem.top = '0px';
         programmingListItem.top = '-10px';
-    } else if ( activeFilter === 'scb' ) {
+    } else if ( props.activeFilter === cats.scb ) {
         musicListItem.top = '0px';
         photographyListItem.top = '0px';
         programmingListItem.top = '0px';
@@ -37,21 +37,21 @@ export const Header = () => {
         photographyListItem.top = '0px';
         programmingListItem.top = '0px';
 
-        setFilter('scb')
+        props.setter('scb')
     }
 
     return (
         <div id='header'>
             <div id='titleMainNav'>
-            <h1 onClick={ () => setFilter('scb') } >
+            <h1 onClick={ () => props.setter(cats.scb) } >
                 samuelcbird
             </h1>
                 <ul id="navList">
-                    <li onClick={ () => setFilter('music') }
+                    <li onClick={ () => props.setter(cats.music) }
                         style={ musicListItem }>music</li>
-                    <li onClick={ () => setFilter('photography') } 
+                    <li onClick={ () => props.setter(cats.photo) } 
                         style={ photographyListItem }>photography</li>
-                    <li onClick={ () => setFilter('programming') } 
+                    <li onClick={ () => props.setter(cats.prog) } 
                         style={ programmingListItem }>programming</li>
                 </ul>
             </div>
