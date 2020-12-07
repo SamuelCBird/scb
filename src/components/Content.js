@@ -1,16 +1,16 @@
 import React from 'react';
 import { Card } from './Card'
-import { cats } from './DataEnums';
 import { DataObjects } from './DataObjects'
 
-export const Content = (props) => {
+export function Content() {
     return (
         <div id='content'>
             { DataObjects.map(item => {
-                if ( props.activeFilter !== cats.scb ) {
-                    if ( item.cat === props.activeFilter ) {
+                if ( window.location.pathname.slice(1) !== '' ) {
+                    if ( item.cat === window.location.pathname.slice(1) ) {
                         return <Card data={item} />
                     }
+                    return null
                 } else {
                     return <Card data={item} />
                 }

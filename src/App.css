@@ -41,15 +41,21 @@ h1 {
   line-height: 90px;
   z-index: 20;
 }
+.link {
+  position: relative;
+  color: #E7E7E7;
+  text-decoration: none;
+}
+.activeLink {
+  top: -10px;
+}
 #header h1 {
-  cursor: pointer;
   color: #E7E7E7;
 }
 #titleMainNav {
   display: flex;
 }
 #header ul {
-  cursor: pointer;
   color: #E7E7E7;
   margin: 0 0 0 30px;
   font-family: 'Poppins';
@@ -61,25 +67,22 @@ h1 {
   display: inline-block;
   margin: 0 40px 0 0;
   padding-left: 10px;
-  color: '#E7E7E7'
 }
 #navList2 {
-  /* background-color: blueviolet; */
   padding: 0 0 0 30px;
 }
 #navList2 li {
-  /* background-color: brown; */
   display: inline-flex;
   margin: 0 40px 0 0;
 }
-/* stop button looking like button */
-button {
-  font-family: inherit;
-  font-size: 100%;
-  background-color: #232323;
-  color: #E7E7E7;
-  border: 0;
-  padding: 0;
+#musicListItem {
+  border-left: 8px solid #A9DCAE;
+}
+#photogListItem {
+  border-left: 8px solid #FEAD73;
+}
+#progListItem {
+  border-left: 8px solid #C893F1;
 }
 /* Content */
 #content {

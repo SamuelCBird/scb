@@ -1,16 +1,22 @@
-import React, { useState } from 'react'
-import { Header } from './components/Header'
-import { Footer } from './components/Footer'
-import { Content } from './components/Content'
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Content } from './components/Content';
+import { NotFound } from './components/NotFound';
 import './App.css';
 
 function App() {
-  let [filter, setFilter] = useState('scb');
-  
   return (
     <div> 
-      <Header setter={setFilter} activeFilter={filter} />
-      <Content activeFilter={filter} />
+      <Header />
+      <Switch>
+        <Route exact path='/' render={Content} />
+        <Route exact path='/music' render={Content} />
+        <Route exact path='/photography' render={Content} />
+        <Route exact path='/programming' render={Content} />
+        <Route render={NotFound} />
+      </Switch>
       <Footer />
     </div>
   );
