@@ -1,20 +1,29 @@
 import React from 'react';
-import { Card } from './Card'
-import { DataObjects } from './DataObjects'
+import { useLocation, Link, Route, Switch } from 'react-router-dom';
+import { Card } from './Card';
+import { DataObjects } from './DataObjects';
+import { Lightbox } from './Lightbox';
 
-export function Content() {
+export const Content = ({match}) => {
+    const location = useLocation().pathname.slice(1);
+    const data = DataObjects;
+
     return (
         <div id='content'>
-            { DataObjects.map(item => {
-                if ( window.location.pathname.slice(1) !== '' ) {
-                    if ( item.cat === window.location.pathname.slice(1) ) {
-                        return <Card data={item} />
+            { data.map(item => {
+                if ( location !== '' ) {
+                    if ( item.cat === location ) {
+                        return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
                     }
                     return null
                 } else {
-                    return <Card data={item} />
+                    return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
                 }
             }) }
+            <Switch>
+                <Route exact path={`${match.path}/:id`} 
+                    component={Lightbox} />
+            </Switch>
         </div>
     )
 }

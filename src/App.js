@@ -6,16 +6,19 @@ import { Content } from './components/Content';
 import { NotFound } from './components/NotFound';
 import './App.css';
 
-function App() {
+const App = (match) => {
   return (
     <div> 
       <Header />
       <Switch>
-        <Route exact path='/' render={Content} />
-        <Route exact path='/music' render={Content} />
-        <Route exact path='/photography' render={Content} />
-        <Route exact path='/programming' render={Content} />
-        <Route render={NotFound} />
+        <Route exact path='/' component={Content} />
+        <Route path='/music' component={Content} />
+        <Route path='/photography' component={Content} />
+        <Route path='/programming' component={Content} />
+
+        <Route path={`${match.url}/:id`} render={(props) => <Content {...props}/>}/>
+        {/* <Route path={`${match.url}/:id`} component={Content} />          */}
+        <Route><NotFound /></Route>
       </Switch>
       <Footer />
     </div>
