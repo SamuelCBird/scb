@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom'
 import { DataObjects } from './DataObjects';
+import { ImagePreview } from './ImagePreview';
 import closeButton from './closeButton.svg'
 
 export const Lightbox = (props) => {
@@ -74,7 +75,12 @@ export const Lightbox = (props) => {
             <div style={close} onClick={() => { history.goBack() } }></div>
             <div style={blackout} onClick={() => { history.goBack() } }></div>
             <div id="lightboxContent" style={lightboxContent}>
-                <div style={imageDisplay}></div>
+                <div style={{width: '100%', display: 'inline-flex', justifyContent: 'space-evenly'}}>
+                    <div style={imageDisplay}></div>
+                    <div style={{flexDirection: 'column'}}>
+                        <ImagePreview /><ImagePreview /><ImagePreview /><ImagePreview />
+                    </div>
+                </div>
                 <h2>{title}</h2>
                 <p>{descrip}</p>
             </div>
