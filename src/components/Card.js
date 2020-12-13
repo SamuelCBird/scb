@@ -26,6 +26,8 @@ export const Card = (props) => {
     if ( props.data ) {
         // populate bg image
         cardStyle.backgroundImage = `url(${props.data.bgImage})`;
+
+        // colour line
         if ( props.data.cat === cats.music ) {
             line.backgroundColor = '#A9DCAE';
         } else if ( props.data.cat === cats.photo ) {
