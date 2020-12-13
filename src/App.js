@@ -15,9 +15,6 @@ const App = (match) => {
         <Route path='/music' component={Content} />
         <Route path='/photography' component={Content} />
         <Route path='/programming' component={Content} />
-
-        <Route path={`${match.url}/:id`} render={(props) => <Content {...props}/>}/>
-        {/* <Route path={`${match.url}/:id`} component={Content} />          */}
         <Route><NotFound /></Route>
       </Switch>
       <Footer />

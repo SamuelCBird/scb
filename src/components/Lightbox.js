@@ -3,15 +3,19 @@ import { DataObjects } from './DataObjects';
 
 export const Lightbox = (props) => {
     const itemID = props.match.params.id;
-    // let [currentItem, setItem] = useState(null);
-    let currentItem = null;
-
-    DataObjects.map(item => {
-        if (item.id === itemID) {
-            console.log('matched')
-            currentItem = item
-        }
-    })
+    let [title, setTitle] = useState();
+    let [descrip, setDescrip] = useState();
+    let [image, setImage] = useState();
+    
+    useEffect(() => {
+        DataObjects.forEach(item => {
+            if (item.id.toString() === itemID) {
+                setTitle(item.title);
+                setDescrip(item.descrip);
+                setImage(item.bgImage);
+            }
+        })
+    }, [])
 
     const lb_container = {
         display: 'flex',
@@ -33,7 +37,6 @@ export const Lightbox = (props) => {
         opacity: '0.5'
     }
     const lb_content = {
-        // position: 'absolute',
         backgroundColor: '#E7E7E7',
         width: '900px',
         height: '800px',
@@ -45,8 +48,9 @@ export const Lightbox = (props) => {
         <div style={lb_container}>
             <div style={blackout}></div>
             <div style={lb_content}>
-                <h1>{currentItem.title}</h1>
-                {currentItem.descrip}
+                <h1>{title}</h1>
+                <img src={image}></img>
+                <p>{descrip}</p>
             </div>
         </div>
     )
