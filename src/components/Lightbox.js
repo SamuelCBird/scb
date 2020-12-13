@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom'
 import { DataObjects } from './DataObjects';
+import closeButton from './closeButton.svg'
 
 export const Lightbox = (props) => {
+    const history = useHistory();
     const itemID = props.match.params.id;
     let [title, setTitle] = useState();
     let [descrip, setDescrip] = useState();
@@ -17,7 +20,19 @@ export const Lightbox = (props) => {
         })
     }, [])
 
-    const lb_container = {
+    const close = {
+        position: 'fixed',
+        zIndex: '100',
+        backgroundImage: `url(${closeButton})`,
+        backgroundRepeat: 'none',
+        backgroundSize: 'cover',
+        width: '40px',
+        height: '40px',
+        top: '30px',
+        right: '30px',
+        cursor: 'pointer'
+    }
+    const lightboxContainer = {
         display: 'flex',
         height: '100%',
         width: '100%',
@@ -36,20 +51,31 @@ export const Lightbox = (props) => {
         backgroundColor: '#000',
         opacity: '0.5'
     }
-    const lb_content = {
+    const lightboxContent = {
         backgroundColor: '#E7E7E7',
         width: '900px',
-        height: '800px',
+        height: '600px',
         zIndex: '100',
-        padding: '20px'
+        padding: '20px',
+        overflow: 'scroll'
     }
-
+    const imageDisplay = {
+        backgroundImage: `url(${image})`,
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        top: '10px',
+        left: '10px',
+        height: '400px',
+        width: '600px'
+    }
     return (
-        <div style={lb_container}>
-            <div style={blackout}></div>
-            <div style={lb_content}>
-                <h1>{title}</h1>
-                <img src={image}></img>
+        <div style={lightboxContainer}>
+            <div style={close} onClick={() => { history.goBack() } }></div>
+            <div style={blackout} onClick={() => { history.goBack() } }></div>
+            <div id="lightboxContent" style={lightboxContent}>
+                <div style={imageDisplay}></div>
+                <h2>{title}</h2>
                 <p>{descrip}</p>
             </div>
         </div>
