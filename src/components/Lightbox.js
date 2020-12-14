@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom'
 import { DataObjects } from './DataObjects';
-import { ImagePreview } from './ImagePreview';
-import closeButton from './closeButton.svg'
+import { ImageView } from './ImageView';
+import closeButton from './closeButton.svg';
 
 export const Lightbox = (props) => {
     const history = useHistory();
@@ -19,7 +19,7 @@ export const Lightbox = (props) => {
                 setImage(item.bgImage);
             }
         })
-    }, [])
+    }, [itemID])
 
     const close = {
         position: 'fixed',
@@ -29,7 +29,7 @@ export const Lightbox = (props) => {
         backgroundSize: 'cover',
         width: '40px',
         height: '40px',
-        top: '30px',
+        top: '120px',
         right: '30px',
         cursor: 'pointer'
     }
@@ -60,27 +60,12 @@ export const Lightbox = (props) => {
         padding: '20px',
         overflow: 'scroll'
     }
-    const imageDisplay = {
-        backgroundImage: `url(${image})`,
-        backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        top: '10px',
-        left: '10px',
-        height: '400px',
-        width: '600px'
-    }
     return (
         <div style={lightboxContainer}>
             <div style={close} onClick={() => { history.goBack() } }></div>
             <div style={blackout} onClick={() => { history.goBack() } }></div>
             <div id="lightboxContent" style={lightboxContent}>
-                <div style={{width: '100%', display: 'inline-flex', justifyContent: 'space-evenly'}}>
-                    <div style={imageDisplay}></div>
-                    <div style={{flexDirection: 'column'}}>
-                        <ImagePreview /><ImagePreview /><ImagePreview /><ImagePreview />
-                    </div>
-                </div>
+                <ImageView images={image}/>
                 <h2>{title}</h2>
                 <p>{descrip}</p>
             </div>
