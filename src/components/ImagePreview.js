@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 export const ImagePreview = (props) => {
+    // eslint-disable-next-line
     let [selected, setSelected] = useState(false);
 
     useEffect(() => {
@@ -8,7 +9,7 @@ export const ImagePreview = (props) => {
             setSelected(true);
             props.forSelection(props.src);
         }
-    }, [props.objKey])
+    }, [props])
 
     function selectImage() {
         setSelected(true);
