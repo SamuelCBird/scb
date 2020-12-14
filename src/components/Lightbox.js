@@ -9,14 +9,14 @@ export const Lightbox = (props) => {
     const itemID = props.match.params.id;
     let [title, setTitle] = useState();
     let [descrip, setDescrip] = useState();
-    let [image, setImage] = useState();
+    let [images, setImages] = useState();
     
     useEffect(() => {
         DataObjects.forEach(item => {
             if (item.id.toString() === itemID) {
                 setTitle(item.title);
                 setDescrip(item.descrip);
-                setImage(item.bgImage);
+                setImages(item.bgImage);
             }
         })
     }, [itemID])
@@ -65,7 +65,7 @@ export const Lightbox = (props) => {
             <div style={close} onClick={() => { history.goBack() } }></div>
             <div style={blackout} onClick={() => { history.goBack() } }></div>
             <div id="lightboxContent" style={lightboxContent}>
-                <ImageView images={image}/>
+                <ImageView imgs={images} />
                 <h2>{title}</h2>
                 <p>{descrip}</p>
             </div>

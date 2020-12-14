@@ -2,7 +2,8 @@ import React from 'react';
 import { cats, cardSize } from './DataEnums'
 
 export const Card = (props) => {
-    const cardStyle = {
+    
+    let cardStyle = {
         position: 'relative',
         margin: '20px 20px 0 0',
         border: '5px solid #fff',
@@ -14,7 +15,7 @@ export const Card = (props) => {
         backgroundSize: 'cover',
         backgroundPosition: 'top'
     }
-    const line = {
+    let line = {
         position: 'absolute',
         bottom: '0',
         height: '8px',
@@ -25,8 +26,7 @@ export const Card = (props) => {
 
     if ( props.data ) {
         // populate bg image
-        const image = props.data.bgImage[0];
-        console.log(image);
+        const image = props.data.bgImage.img1;
         cardStyle.backgroundImage = `url(${image})`;
 
         // colour line
