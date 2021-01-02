@@ -4,20 +4,11 @@ import defaultImage from '../images/defaultImage.jpg';
 
 export const ImageView = (props) => {
     const [images, setImages] = useState();
-    let [previews, setPreviews] = useState();
 
+    // images come in as object - img1: image
+    // here we need to hold info: name: string, image: string, selected: bool,
 
-    // CANNOT FIGURE THIS OUT
-    useEffect(() => {
-        setImages(props.imgs);
-
-        Object.keys(images).forEach(key => {
-            setPreviews({
-                ...previews,
-                [key]: images[key]
-            })
-        })
-    }, [images, props.imgs])
+    //  look for another way...
 
     let imageDisplay = {
         backgroundImage: `url()`,
@@ -34,7 +25,9 @@ export const ImageView = (props) => {
         <div style={{width: '100%', display: 'inline-flex', justifyContent: 'space-evenly'}}>
             <div style={imageDisplay}></div>
             <div style={{flexDirection: 'column'}}>
-
+                {images.map(image => {
+                    return <ImagePreview name={image['name']} image={image['image']} selected={image['selected']} />
+                })}
             </div>
         </div>
     )

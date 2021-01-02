@@ -7,9 +7,9 @@ import closeButton from './closeButton.svg';
 export const Lightbox = (props) => {
     const history = useHistory();
     const itemID = props.match.params.id;
-    let [title, setTitle] = useState();
-    let [descrip, setDescrip] = useState();
-    let [images, setImages] = useState();
+    const [title, setTitle] = useState();
+    const [descrip, setDescrip] = useState();
+    const [images, setImages] = useState();
     
     useEffect(() => {
         DataObjects.forEach(item => {
