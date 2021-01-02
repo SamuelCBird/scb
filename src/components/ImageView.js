@@ -3,21 +3,24 @@ import { ImagePreview } from './ImagePreview';
 import defaultImage from '../images/defaultImage.jpg';
 
 export const ImageView = (props) => {
-    let [images, setImages] = useState();
-    let [display, setDisplay] = useState(defaultImage);
+    const [images, setImages] = useState();
+    let [previews, setPreviews] = useState();
 
+
+    // CANNOT FIGURE THIS OUT
     useEffect(() => {
-        let initalImages = [];
-        if (props.imgs !== undefined) {
-            for (let [key, value] of Object.entries(props.imgs)) {
-                initalImages.push([key, value])
-            }
-            setImages(initalImages);
-        }
-    }, [props.imgs]);
+        setImages(props.imgs);
+
+        Object.keys(images).forEach(key => {
+            setPreviews({
+                ...previews,
+                [key]: images[key]
+            })
+        })
+    }, [images, props.imgs])
 
     let imageDisplay = {
-        backgroundImage: `url(${display})`,
+        backgroundImage: `url()`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -27,22 +30,11 @@ export const ImageView = (props) => {
         width: '600px'
     }
 
-    function imageSelection(selectedImage) {
-        setDisplay(selectedImage);
-    }
-
     return (
         <div style={{width: '100%', display: 'inline-flex', justifyContent: 'space-evenly'}}>
             <div style={imageDisplay}></div>
             <div style={{flexDirection: 'column'}}>
-                {   
-                    images !== undefined ? 
-                    images.map(item => {
-                        // src = the image, objKey = a name to set it as selected in ImagePreview, forSelection = callback function to select from the different images key = for React to make sure the right thing is returned in .map function
-                        return <ImagePreview src={item[1]} objKey={item[0]} forSelection={imageSelection} key={item[0]} /> 
-                    }) :
-                    null
-                }
+
             </div>
         </div>
     )
