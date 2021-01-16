@@ -1,14 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { ImagePreview } from './ImagePreview';
-import defaultImage from '../images/defaultImage.jpg';
+import React from 'react';
 
 export const ImageView = (props) => {
-    const [images, setImages] = useState();
-
-    // images come in as object - img1: image
-    // here we need to hold info: name: string, image: string, selected: bool,
-
-    //  look for another way...
 
     let imageDisplay = {
         backgroundImage: `url()`,
@@ -21,14 +13,24 @@ export const ImageView = (props) => {
         width: '600px'
     }
 
+    if (props.imgs) {
+        // populate image
+        const image = props.imgs.img1;
+        imageDisplay.backgroundImage = `url(${image})`;
+    }
+
     return (
         <div style={{width: '100%', display: 'inline-flex', justifyContent: 'space-evenly'}}>
             <div style={imageDisplay}></div>
+
+
+            {/* 
+            
+            Can delete once there is a branch to develop this
+
             <div style={{flexDirection: 'column'}}>
-                {images.map(image => {
-                    return <ImagePreview name={image['name']} image={image['image']} selected={image['selected']} />
-                })}
-            </div>
+
+            </div> */}
         </div>
     )
 }
