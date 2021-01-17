@@ -1,0 +1,28 @@
+#lightbox-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+#lightbox-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #e7e7e7;
+    width: 900px;
+    height: 700px;
+    z-index: 100;
+    padding: 20px;
+}
+#blackout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 50;
+    background-color: #000;
+    opacity: 0.5;
+}

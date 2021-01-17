@@ -1,5 +1,6 @@
 import React from 'react';
 import { cats, cardSize } from './DataEnums'
+// import '../styles/Card.css'
 
 export const Card = (props) => {
     

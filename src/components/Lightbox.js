@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 import { DataObjects } from './DataObjects';
 import { ImageView } from './ImageView';
 import closeButton from './closeButton.svg';
+import '../styles/Lightbox.css';
 
 export const Lightbox = (props) => {
     const history = useHistory();
@@ -33,42 +34,12 @@ export const Lightbox = (props) => {
         right: '30px',
         cursor: 'pointer'
     }
-    const lightboxContainer = {
-        display: 'flex',
-        height: '100%',
-        width: '100%',
-        margin: '0',
-        padding: '0',
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
-    const blackout = {
-        position: 'fixed',
-        top: '0',
-        left: '0',
-        height: '100%',
-        width: '100%',
-        zIndex: '50',
-        backgroundColor: '#000',
-        opacity: '0.5'
-    }
-    const lightboxContent = {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        backgroundColor: '#E7E7E7',
-        width: '900px',
-        height: '700px',
-        zIndex: '100',
-        padding: '20px',
-        overflow: 'scroll',
-        border: '1px solid black'
-    }
+
     return (
-        <div style={lightboxContainer}>
+        <div id='lightbox-container'>
             <div style={close} onClick={() => { history.goBack() } }></div>
-            <div style={blackout} onClick={() => { history.goBack() } }></div>
-            <div id="lightboxContent" style={lightboxContent}>
+            <div id='blackout' onClick={() => { history.goBack() } }></div>
+            <div id="lightbox-content">
                 <ImageView imgs={images} style={{flexGrow: 2}}/>
                 <div>
                     <h2>{title}</h2>
