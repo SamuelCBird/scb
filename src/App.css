@@ -112,7 +112,7 @@ p {
   border-left: 8px solid #C893F1;
 }
 /* Content */
-#content {
+.content {
   position: relative;
   top: 100px;
   display: flex;
@@ -124,7 +124,7 @@ p {
 }
 /* Card */
 #card:hover {
-  top: -10px;
+  top: -5px;
 }
 #forhover {
   position: relative;

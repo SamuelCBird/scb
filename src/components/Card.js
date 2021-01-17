@@ -5,7 +5,7 @@ export const Card = (props) => {
     
     let cardStyle = {
         position: 'relative',
-        margin: '20px 20px 0 0',
+        margin: '10px 10px 0 0',
         border: '5px solid #fff',
         width: '160px',
         height: '160px',

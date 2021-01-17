@@ -4,6 +4,8 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Content } from './components/Content';
 import { NotFound } from './components/NotFound';
+import { About } from './components/About';
+import { CurriculumVitae } from './components/CurriculumVitae';
 import './App.css';
 
 const App = (match) => {
@@ -15,6 +17,8 @@ const App = (match) => {
         <Route path='/music' component={Content} />
         <Route path='/photography' component={Content} />
         <Route path='/programming' component={Content} />
+        <Route path='/about' component={About} />
+        <Route path='/curriculumvitae' component={CurriculumVitae} />
         <Route><NotFound /></Route>
       </Switch>
       <Footer />
