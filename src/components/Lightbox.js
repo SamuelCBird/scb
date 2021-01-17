@@ -53,21 +53,27 @@ export const Lightbox = (props) => {
         opacity: '0.5'
     }
     const lightboxContent = {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
         backgroundColor: '#E7E7E7',
         width: '900px',
-        height: '600px',
+        height: '700px',
         zIndex: '100',
         padding: '20px',
-        overflow: 'scroll'
+        overflow: 'scroll',
+        border: '1px solid black'
     }
     return (
         <div style={lightboxContainer}>
             <div style={close} onClick={() => { history.goBack() } }></div>
             <div style={blackout} onClick={() => { history.goBack() } }></div>
             <div id="lightboxContent" style={lightboxContent}>
-                <ImageView imgs={images} />
-                <h2>{title}</h2>
-                <p>{descrip}</p>
+                <ImageView imgs={images} style={{flexGrow: 2}}/>
+                <div>
+                    <h2>{title}</h2>
+                    <p>{descrip}</p>
+                </div>
             </div>
         </div>
     )

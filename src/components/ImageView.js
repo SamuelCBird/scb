@@ -3,14 +3,15 @@ import React from 'react';
 export const ImageView = (props) => {
 
     let imageDisplay = {
+        flexGrow: '2',
         backgroundImage: `url()`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         top: '10px',
         left: '10px',
-        height: '400px',
-        width: '600px'
+        minHeight: '400px',
+        minWidth: '400px'
     }
 
     if (props.imgs) {
@@ -20,17 +21,6 @@ export const ImageView = (props) => {
     }
 
     return (
-        <div style={{width: '100%', display: 'inline-flex', justifyContent: 'space-evenly'}}>
             <div style={imageDisplay}></div>
-
-
-            {/* 
-            
-            Can delete once there is a branch to develop this
-
-            <div style={{flexDirection: 'column'}}>
-
-            </div> */}
-        </div>
     )
 }
