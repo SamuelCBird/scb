@@ -10,7 +10,7 @@ export const Content = ({match}) => {
     const data = DataObjects;
 
     return (
-        <div class='content'>
+        <div className='content'>
             { data.map(item => {
                 if ( location !== '' ) {
                     if ( item.cat === location ) {

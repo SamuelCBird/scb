@@ -1,0 +1,63 @@
+/* NavBar */
+#header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: #232323;
+    height: 90px;
+    margin: 0;
+    width: 100%;
+    line-height: 90px;
+    z-index: 20;
+  }
+  .link {
+    position: relative;
+    color: #E7E7E7;
+    text-decoration: none;
+  }
+  .activeLink {
+    top: -10px;
+  }
+  #header h1 {
+    color: #E7E7E7;
+  }
+  #titleMainNav {
+    display: flex;
+  }
+  #header ul {
+    color: #E7E7E7;
+    margin: 0 0 0 30px;
+    font-family: 'Poppins';
+    font-weight: 300;
+  }
+  #navList li {
+    position: relative;
+    line-height: normal;
+    display: inline-block;
+    margin: 0 40px 0 0;
+    padding-left: 10px;
+  }
+  #navList2 {
+    padding: 0 0 0 30px;
+  }
+  #navList2 li {
+    display: inline-flex;
+    margin: 0 40px 0 0;
+  }
+  #musicListItem {
+    border-left: 8px solid #A9DCAE;
+  }
+  #photogListItem {
+    border-left: 8px solid #FEAD73;
+  }
+  #progListItem {
+    border-left: 8px solid #C893F1;
+  }
+
+/* Responsiveness */
+  @media screen and (min-width: 1366px) and (max-width: 1366px) {
+    #header {
+      width: 1366px;
+    }
+
+  }

@@ -2,7 +2,7 @@ import React from 'react';
 
 export const CurriculumVitae = () => {
     return (
-        <div class='content'>
+        <div className='content'>
             Curriculum Vitae.
         </div>
     )

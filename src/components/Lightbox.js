@@ -47,7 +47,7 @@ export const Lightbox = (props) => {
             <div id='blackout' onClick={() => { history.goBack() } }></div>
             <div id="lightbox-content">
                 <ImageView imgs={images} style={{flexGrow: 2}}/>
-                <div>
+                <div style={{padding: '10px 0 0 0'}}>
                     <h2>{title}</h2>
                     <p>{descrip}</p>
                 </div>
