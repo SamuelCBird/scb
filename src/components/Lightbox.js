@@ -11,7 +11,7 @@ export const Lightbox = (props) => {
     const [title, setTitle] = useState();
     const [descrip, setDescrip] = useState();
     const [images, setImages] = useState();
-    
+
     useEffect(() => {
         DataObjects.forEach(item => {
             if (item.id.toString() === itemID) {
@@ -35,9 +35,15 @@ export const Lightbox = (props) => {
         cursor: 'pointer'
     }
 
+    const exitLightbox = () => {
+        // trying to figure out closing lightbox properly. Not much luck so far. 
+        console.log('yoyoyo')
+        console.log(props.prevLocation)
+    }
+
     return (
         <div id='lightbox-container'>
-            <div style={close} onClick={() => { history.goBack() } }></div>
+            <div style={close} onClick={() => { exitLightbox() } }></div>
             <div id='blackout' onClick={() => { history.goBack() } }></div>
             <div id="lightbox-content">
                 <ImageView imgs={images} style={{flexGrow: 2}}/>

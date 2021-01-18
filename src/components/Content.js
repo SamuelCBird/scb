@@ -5,6 +5,7 @@ import { DataObjects } from './DataObjects';
 import { Lightbox } from './Lightbox';
 
 export const Content = ({match}) => {
+    // might be able to lose the useLocation
     const location = useLocation().pathname.slice(1);
     const data = DataObjects;
 
@@ -22,7 +23,9 @@ export const Content = ({match}) => {
             }) }
             <Switch>
                 <Route exact path={`${match.path}/:id`} 
-                    component={Lightbox} />
+                    render={(props) => (
+                        <Lightbox {...props} prevLocation={props.location} />
+                    )} />
             </Switch>
         </div>
     )
