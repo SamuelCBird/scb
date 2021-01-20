@@ -46,6 +46,7 @@
   }
   #musicListItem {
     border-left: 8px solid #A9DCAE;
+    min-height: 27px;
   }
   #photogListItem {
     border-left: 8px solid #FEAD73;
