@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 80 80">
+<metadata>
+<vectornator:setting key="OutlineMode" value="0"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="Units" value="Points"/>
+<vectornator:setting key="DynamicGuides" value="1"/>
+<vectornator:setting key="GuidesVisible" value="1"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="IsolateActiveLayer" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="GridSpacing" value="36"/>
+</metadata>
+<defs/>
+<g id="Layer 3" vectornator:layerName="Layer 3">
+<g opacity="1">
+<path d="M43.6943+39.2437L76.0344+22.2581L74.7524+4.97721L44.5131+19.7894" fill-rule="evenodd" fill="#a9dcae" opacity="1"/>
+<path stroke="#a9dcae" fill-rule="evenodd" stroke-width="3.43" d="M5.67729+46.7687C0.149796+53.7832+7.00679+57.5013+11.8813+56.7236C16.7559+55.9459+19.1193+49.2574+17.4944+46.9242C15.8696+44.591+11.4382+39.458+5.67729+46.7687Z" fill="#a9dcae" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<path stroke="#a9dcae" stroke-width="3.43" d="M17.9843+48.4726L17.1357+7.40221C17.1357+7.40221+20.107+13.8432+26.8093+18.9427C29.797+21.2158+33.7675+24.5432+30.3733+30.6528" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<path stroke="#a9dcae" fill-rule="evenodd" stroke-width="3.43" d="M32.7952+66.8784C27.6113+73.5198+34.042+77.04+38.6136+76.3037C43.1851+75.5673+45.4016+69.2347+43.8778+67.0256C42.3539+64.8166+38.198+59.9566+32.7952+66.8784Z" fill="#a9dcae" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<path stroke="#a9dcae" fill-rule="evenodd" stroke-width="3.43" d="M65.0304+51.4783C59.9494+58.2749+66.2524+61.8774+70.7324+61.1238C75.2124+60.3703+77.3854+53.8897+75.8914+51.629C74.3984+49.3684+70.3254+44.3949+65.0304+51.4783Z" fill="#a9dcae" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<path stroke="#a9dcae" stroke-width="3.43" d="M44.3774+68.9247L43.7557+21.579L75.4444+3.60001L76.3754+53.2967" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>
