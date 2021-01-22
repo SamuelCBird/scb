@@ -33,7 +33,7 @@
 <path stroke="#fead7d" stroke-width="2.02" d="M23.4862+8.66519L23.526+6.66177C23.5775+4.06863+25.7218+1.96647+28.3155+1.96647L38.1106+1.96647C40.7065+1.96647+42.8109+4.07089+42.8109+6.66683L42.8109+8.66519L23.4862+8.66519Z" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="Layer 2" vectornator:layerName="Layer 2">
+<g id="Layer 2" vectornator:layerName="Layer 2" visibility="hidden">
 <g opacity="1">
 <path d="M59.7596+54.0253L101.441+32.1335L99.789+9.86104L60.8149+28.9517" opacity="1" fill="#a9dcae"/>
 <path stroke="#a9dcae" stroke-width="3.43" d="M10.7616+63.7238C3.63746+72.7645+12.475+77.5565+18.7575+76.5541C25.0401+75.5518+28.0862+66.9314+25.992+63.9243C23.8978+60.9172+18.1864+54.3015+10.7616+63.7238Z" fill="#a9dcae" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
@@ -43,7 +43,7 @@
 <path stroke="#a9dcae" stroke-width="3.43" d="M60.6399+92.2795L60.6122+30.3835L101.441+8.08604L101.881+72.1375" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="miter"/>
 </g>
 </g>
-<g id="Layer 3" vectornator:layerName="Layer 3" visibility="hidden">
+<g id="Layer 3" vectornator:layerName="Layer 3">
 <path stroke="#c893f1" stroke-width="4.3" d="M23.1145+7.98677L86.9808+7.98677C95.2802+7.98677+102.008+14.7148+102.008+23.0141L102.008+86.9862C102.008+95.2856+95.2802+102.007+86.9808+101.998L23.1145+101.933C14.8151+101.924+8.08712+95.1892+8.08712+86.8898L8.08712+23.0141C8.08712+14.7148+14.8151+7.98677+23.1145+7.98677Z" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="miter"/>
 <path stroke="#c893f1" stroke-width="1.98" d="M8.17706+25.359L101.006+25.3485" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="miter"/>
 <path stroke="#c893f1" stroke-width="0.9" d="M87.8047+17.634C87.8047+18.4591+88.4463+19.128+89.2377+19.128C90.0292+19.128+90.6707+18.4591+90.6707+17.634C90.6707+16.809+90.0292+16.1401+89.2377+16.1401C88.4463+16.1401+87.8047+16.809+87.8047+17.634Z" fill="#c893f1" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>

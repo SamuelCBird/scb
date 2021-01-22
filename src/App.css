@@ -101,8 +101,18 @@ p {
 }
 
 /* Responsiveness */
-@media screen and (min-width: 1024px) and (max-width: 1366px) {
+@media only screen and (max-width: 1366px) {
+  .content {
+    width: 1000px;
+  }
+}
+@media only screen and (max-width: 1024px) {
   .content {
     width: 800px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content {
+    width: 600px;
   }
 }
