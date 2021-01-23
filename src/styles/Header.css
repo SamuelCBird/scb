@@ -7,7 +7,6 @@
     height: 90px;
     margin: 0;
     width: 100%;
-    /* line-height: 90px; */
     align-items: center;
     z-index: 20;
   }
@@ -57,8 +56,8 @@
     list-style: none;
   }
 .listItem {
-    height: 33px;
-    width: 33px;
+    height: 30px;
+    width: 30px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -67,33 +66,63 @@
 
 
 /* Responsiveness */
-  @media screen and (max-width: 1366px) {
-    #header {
-      max-width: 1366px;
-    }
-    .listItem {
-      height: 25px;
-      width: 25px;
-    }
+@media only screen and (max-width: 1600px) {
+  #header {
+    max-width: 1600px;
   }
-  @media only screen and (max-width: 1024px) {
-    #header {
-      width: 1024px;
-    }
-    .listItem {
-      height: 25px;
-      width: 25px;
-    }
-    #navList li {
-      margin: 0;
-    }
+}
+@media only screen and (max-width: 1366px) {
+  #header {
+    max-width: 1366px;
   }
-  @media only screen and (max-width: 768px) {
-    #header {
-      width: 768px;
-    }
-    .listItem {
-      height: 25px;
-      width: 25px;
-    }
+  .listItem {
+    height: 27px;
+    width: 27px;
   }
+}
+@media only screen and (max-width: 1067px) {
+  #header {
+    max-width: 1067px;
+  }
+  .listItem {
+    height: 25px;
+    width: 25px;
+  }
+  #navList li {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #header {
+    max-width: 768px;
+  }
+  .listItem {
+    height: 25px;
+    width: 25px;
+  }
+  #navList li {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 414px) {
+  #header {
+    max-width: 414px;
+  }
+  #header h1 {
+    padding: 0 15px 0 15px;
+  }
+  .listItem {
+    height: 20px;
+    width: 20px;
+  }
+  #navList li {
+    margin: 0;
+    padding: 0;
+  }
+  #header ul {
+    margin: 0 0 0 5px;
+  }
+  #navList2 li {
+    margin: 0 20px 0 0;
+  }
+}
