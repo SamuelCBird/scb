@@ -80,6 +80,14 @@
     width: 27px;
   }
 }
+@media only screen and (max-width: 1100px) {
+  #header {
+    height: 60px;
+  }
+  #navList li {
+    margin: 0;
+  }
+}
 @media only screen and (max-width: 1067px) {
   #header {
     max-width: 1067px;
@@ -88,20 +96,12 @@
     height: 25px;
     width: 25px;
   }
-  #navList li {
-    margin: 0;
-  }
+
 }
 @media only screen and (max-width: 768px) {
   #header {
     max-width: 768px;
-  }
-  .listItem {
-    height: 25px;
-    width: 25px;
-  }
-  #navList li {
-    margin: 0;
+  
   }
 }
 @media only screen and (max-width: 414px) {
@@ -116,13 +116,25 @@
     width: 20px;
   }
   #navList li {
-    margin: 0;
     padding: 0;
   }
   #header ul {
     margin: 0 0 0 5px;
   }
   #navList2 li {
+    font-size: 0.85rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  #header {
+    max-width: 375px;
+  }
+  .listItem {
+    height: 17px;
+    width: 17px;
+  }
+  #navList2 li {
     margin: 0 20px 0 0;
+    
   }
 }

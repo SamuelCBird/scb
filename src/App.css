@@ -67,6 +67,7 @@ p {
   padding: 40px 0;
   width: 1600px;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 /* Card */
 #card:hover {
@@ -113,6 +114,7 @@ p {
 }
 @media only screen and (max-width: 1100px) {
   .content {
+    top: 30px;
     width: 800px;
   }
 }
@@ -129,5 +131,10 @@ p {
 @media only screen and (max-width: 414px) {
   .content {
     width: 390px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .content {
+    width: 375px;
   }
 }
