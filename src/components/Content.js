@@ -23,7 +23,7 @@ export const Content = ({match}) => {
             <Switch>
                 <Route exact path={`${match.path}/:id`} 
                     render={(props) => (
-                        <Lightbox {...props} prevLocation={props.location} />
+                        <Lightbox {...props} />
                     )} />
             </Switch>
         </div>
