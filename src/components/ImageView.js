@@ -1,17 +1,10 @@
 import React from 'react';
+import '../styles/ImageView.css';
 
 export const ImageView = (props) => {
 
     let imageDisplay = {
-        flexGrow: '2',
-        backgroundImage: `url()`,
-        backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        top: '10px',
-        left: '10px',
-        minHeight: '400px',
-        minWidth: '400px'
+        backgroundImage: `url()`
     }
 
     if (props.imgs) {
@@ -21,6 +14,6 @@ export const ImageView = (props) => {
     }
 
     return (
-            <div style={imageDisplay}></div>
+            <div style={imageDisplay} id="imageViewImage"></div>
     )
 }

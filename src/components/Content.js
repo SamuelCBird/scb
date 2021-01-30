@@ -9,22 +9,26 @@ export const Content = ({match}) => {
     const data = DataObjects;
 
     return (
-        <div className='content'>
-            { data.map(item => {
-                if ( location !== '' ) {
-                    if ( item.cat === location ) {
+        <div style={{width: 0, height: 0}}>
+            <div className='content'>
+                { data.map(item => {
+                    if ( location !== '' ) {
+                        if ( item.cat === location ) {
+                            return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
+                        }
+                        return null
+                    } else {
                         return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
                     }
-                    return null
-                } else {
-                    return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
-                }
-            }) }
+                }) }
+                
+            </div>
+
             <Switch>
-                <Route exact path={`${match.path}/:id`} 
-                    render={(props) => (
-                        <Lightbox {...props} />
-                    )} />
+                    <Route exact path={`${match.path}/:id`} 
+                        render={(props) => (
+                            <Lightbox {...props} />
+                        )} />
             </Switch>
         </div>
     )
