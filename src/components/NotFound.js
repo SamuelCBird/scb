@@ -1,7 +1,8 @@
 import React from 'react';
 
 export const NotFound = () => {
+    console.log('not found')
     return (
-        <div id="content"><h1>Not Found</h1></div>
+        <div className='content'><h1>Not found.</h1></div>
     )
 }

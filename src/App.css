@@ -68,8 +68,7 @@ p {
   flex-wrap: wrap;
   padding: 40px 0;
   width: 1600px;
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   z-index: -20;
 }
 /* Card */
@@ -101,7 +100,7 @@ p {
   width: 100%;
   background-color: #7992C1;
   color: #E7E7E7;
-  z-index: 20;
+  z-index: -10;
 }
 
 /* Responsiveness */
@@ -133,11 +132,11 @@ p {
 }
 @media only screen and (max-width: 414px) {
   .content {
-    width: 390px;
+    /* width: 390px; */
   }
 }
 @media only screen and (max-width: 375px) {
   .content {
-    width: 375px;
+    /* width: 375px; */
   }
 }

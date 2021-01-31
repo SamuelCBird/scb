@@ -22,7 +22,8 @@ const App = (match) => {
           <Route path='/about' component={About} />
           <Route path='/curriculumvitae' component={CurriculumVitae} />
         </LastLocationProvider>
-          <Route><NotFound /></Route>
+        {/* need to work on the not found logic */}
+        {/* <Route><NotFound /></Route> */}
       </Switch>
       <Footer />
     </div>

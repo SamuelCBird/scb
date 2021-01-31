@@ -14,12 +14,14 @@ export const Card = (props) => {
         backgroundImage: '',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: 'top'
+        backgroundPosition: 'top',
+        borderRadius: '25px',
+        overflow: 'hidden'
     }
     let line = {
         position: 'absolute',
         bottom: '0',
-        height: '8px',
+        height: '9px',
         width: '100%',
         backgroundColor: '',
         zIndex: '20'

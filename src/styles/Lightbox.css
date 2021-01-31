@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     position: fixed;
-    display: flex;
+    display: inline-flex;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -18,11 +18,13 @@
     flex-direction: column;
     /* background-color: khaki; */
     background-color: #F4F4F4;
-    width: 1000px;
+    width: 800px;
     height: 70vh;
     z-index: 100;
-    padding: 50px;
+    /* padding: 30px 15px; */
     overflow: scroll;
+    border: 15px solid #F4F4F4;
+    border-radius: 20px;
 }
 #blackout {
     position: fixed;
@@ -33,10 +35,4 @@
     z-index: 90;
     background-color: #000;
     opacity: 0.5;
-}
-/* Responsiveness */
-@media only screen and (max-width: 670px) {
-    #lightbox-content {
-        padding: 10px;
-    }
 }

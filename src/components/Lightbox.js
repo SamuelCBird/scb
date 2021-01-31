@@ -3,7 +3,6 @@ import { useLastLocation } from 'react-router-last-location';
 import { useHistory } from 'react-router-dom'
 import { DataObjects } from './DataObjects';
 import { ImageView } from './ImageView';
-import closeButton from './closeButton.svg';
 import '../styles/Lightbox.css';
 
 // THINK ABOUT ANIMATION
@@ -27,18 +26,18 @@ export const Lightbox = (props) => {
         })
     }, [itemID])
 
-    const close = {
-        position: 'fixed',
-        zIndex: '100',
-        backgroundImage: `url(${closeButton})`,
-        backgroundRepeat: 'none',
-        backgroundSize: 'cover',
-        width: '40px',
-        height: '40px',
-        top: '120px',
-        right: '30px',
-        cursor: 'pointer'
-    }
+    // const close = {
+    //     position: 'fixed',
+    //     zIndex: '100',
+    //     backgroundImage: `url(${closeButton})`,
+    //     backgroundRepeat: 'none',
+    //     backgroundSize: 'cover',
+    //     width: '40px',
+    //     height: '40px',
+    //     top: '120px',
+    //     right: '30px',
+    //     cursor: 'pointer'
+    // }
 
     const exitLightbox = () => {
         if (lastLocation[0] !== null) {
@@ -54,10 +53,9 @@ export const Lightbox = (props) => {
 
     return (
         <div id='lightbox-container'>
-            <div style={close} onClick={() => { exitLightbox() } }></div>
             <div id='blackout' onClick={() => { exitLightbox() } }></div>
             <div id="lightbox-content">
-                <ImageView imgs={images} style={{flexGrow: 2}}/>
+                <ImageView imgs={images}/>
                 <div style={{padding: '10px 0 0 0'}}>
                     <h2>{title}</h2>
                     <p>{descrip}</p>

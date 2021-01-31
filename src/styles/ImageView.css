@@ -3,5 +3,6 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* min-height: 300px; */
+    min-height: 250px;
+    border-radius: 20px;
 }

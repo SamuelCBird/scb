@@ -9,7 +9,7 @@ export const Content = ({match}) => {
     const data = DataObjects;
 
     return (
-        <div style={{width: 0, height: 0}}>
+        <div style={{height: 0, display: 'flex', justifyContent: 'center'}}>
             <div className='content'>
                 { data.map(item => {
                     if ( location !== '' ) {
