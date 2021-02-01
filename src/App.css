@@ -53,20 +53,25 @@ p {
   font-weight: 300;
   margin: 0;
 }
+/* Content and Lightbox Wrapper */
+#wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 /* Content */
 .content {
   position: relative;
   top: 100px;
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  /* flex-direction: row;# */
   flex-wrap: wrap;
   align-content: flex-start;
-  /* overflow: scroll;
-  height: 80vh; */
+  /* overflow: scroll; */
+  height: 100%; 
   padding: 40px 0;
   width: 1600px;
-  margin-bottom: 70px;
   z-index: -20;
 }
 /* Card */

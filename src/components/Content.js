@@ -9,8 +9,8 @@ export const Content = ({match}) => {
     const data = DataObjects;
 
     return (
-        <div style={{height: 0, display: 'flex', justifyContent: 'center'}}>
-                        <div className='content'>
+        <div id="wrapper">
+            <div className='content'>
                 { data.map(item => {
                     if ( location !== '' ) {
                         if ( item.cat === location ) {
