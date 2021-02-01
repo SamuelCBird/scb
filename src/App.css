@@ -31,17 +31,6 @@
   src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-html, body {
-  margin: 0;
-  padding: 0;
-}
-/* Body */
-body {
-  /* height: 100vh; */
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 /* Global */
 h1 {
   height: 100%;
@@ -72,6 +61,9 @@ p {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  align-content: flex-start;
+  /* overflow: scroll;
+  height: 80vh; */
   padding: 40px 0;
   width: 1600px;
   margin-bottom: 70px;
@@ -134,6 +126,10 @@ p {
 @media only screen and (max-width: 670px) {
   .content {
     width: 450px;
+  }
+  #footer {
+    height: 30px;
+    line-height: 30px;
   }
 }
 @media only screen and (max-width: 414px) {

@@ -26,26 +26,9 @@ export const Lightbox = (props) => {
         })
     }, [itemID])
 
-    // const close = {
-    //     position: 'fixed',
-    //     zIndex: '100',
-    //     backgroundImage: `url(${closeButton})`,
-    //     backgroundRepeat: 'none',
-    //     backgroundSize: 'cover',
-    //     width: '40px',
-    //     height: '40px',
-    //     top: '120px',
-    //     right: '30px',
-    //     cursor: 'pointer'
-    // }
-
     const exitLightbox = () => {
         if (lastLocation[0] !== null) {
-            if (['/music', '/photography', '/programming'].includes(lastLocation['0'].pathname)) {
-                history.push(lastLocation['0'].pathname);
-            } else {
-                history.push('/')
-            }
+            history.goBack();
         } else {
             history.push('/');
         }

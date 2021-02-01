@@ -4,7 +4,6 @@ import { LastLocationProvider } from 'react-router-last-location';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Content } from './components/Content';
-import { NotFound } from './components/NotFound';
 import { About } from './components/About';
 import { CurriculumVitae } from './components/CurriculumVitae';
 import './App.css';
@@ -22,8 +21,6 @@ const App = (match) => {
           <Route path='/about' component={About} />
           <Route path='/curriculumvitae' component={CurriculumVitae} />
         </LastLocationProvider>
-        {/* need to work on the not found logic */}
-        {/* <Route><NotFound /></Route> */}
       </Switch>
       <Footer />
     </div>
