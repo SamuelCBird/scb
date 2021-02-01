@@ -37,7 +37,10 @@ html, body {
 }
 /* Body */
 body {
-  /* background-image: url(https://www.roarrdinosauradventure.co.uk/wp-content/uploads/2020/04/Zoom-Background-4.jpg);   */
+  /* height: 100vh; */
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* Global */
 h1 {
