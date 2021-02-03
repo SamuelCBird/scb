@@ -9,4 +9,23 @@
     background-position: top;
     border-radius: 25px;
     overflow: hidden;
+    animation-duration: 50ms;
+
+    /* this z-index might be the only solution, but it prevents hover from working */
+    /* z-index: -10; */
 }
+/* Card */
+#card:hover {
+    top: -5px;
+  }
+  #forhover {
+    position: relative;
+    width:100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 21;
+    opacity: 0%;
+  }
+  #forhover:hover {
+    opacity: 50%;
+  }

@@ -14,7 +14,6 @@ export const Card = (props) => {
         height: '9px',
         width: '100%',
         backgroundColor: '',
-        zIndex: '20'
     }
 
     if ( props.data ) {

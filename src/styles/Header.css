@@ -8,8 +8,11 @@
     margin: 0;
     width: 100%;
     align-items: center;
-    z-index: 0;
+    z-index: 1;
   }
+
+/* NavBar and Footer still showing over the blackout... */
+
   #header a {
     display: flex;
     

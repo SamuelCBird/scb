@@ -1,5 +1,4 @@
 #lightbox-container {
-    /* background-color: lemonchiffon; */
     top: 0;
     left: 0;
     position: fixed;
@@ -16,23 +15,19 @@
     margin: 30px;
     display: flex;
     flex-direction: column;
-    /* background-color: khaki; */
     background-color: #F4F4F4;
     width: 800px;
     height: 70vh;
     z-index: 100;
-    /* padding: 30px 15px; */
     overflow: scroll;
     border: 15px solid #F4F4F4;
     border-radius: 20px;
 }
 #blackout {
     position: fixed;
-    top: 0;
-    left: 0;
     height: 100%;
     width: 100%;
-    z-index: 90;
     background-color: #000;
     opacity: 0.5;
+    z-index: 90;
 }
