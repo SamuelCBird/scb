@@ -15,13 +15,13 @@
     margin: 30px;
     display: flex;
     flex-direction: column;
-    background-color: #F4F4F4;
+    background-color: var(--content-window-colour);
     width: 800px;
     height: 70vh;
     z-index: 100;
     overflow: scroll;
-    border: 15px solid #F4F4F4;
-    border-radius: 20px;
+    border: 15px solid var(--content-window-colour);
+    border-radius: var(--content-border-radius);
 }
 #blackout {
     position: fixed;

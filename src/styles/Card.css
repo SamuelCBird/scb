@@ -1,18 +1,14 @@
 #card {
     position: relative;
     margin: 10px;
-    border: 5px solid #f6f6f6;
-    height: 160px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    border: 2px solid var(--content-window-colour);
+    height: var(--card-height);
+    box-shadow: var(--component-shadow);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
     border-radius: 25px;
     overflow: hidden;
-    animation-duration: 50ms;
-
-    /* this z-index might be the only solution, but it prevents hover from working */
-    /* z-index: -10; */
 }
 /* Card */
 #card:hover {

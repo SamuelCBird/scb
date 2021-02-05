@@ -7,6 +7,7 @@ import { Content } from './components/Content';
 import { About } from './components/About';
 import { CurriculumVitae } from './components/CurriculumVitae';
 import './App.css';
+import './styles/global.css';
 
 const App = (match) => {
   return (

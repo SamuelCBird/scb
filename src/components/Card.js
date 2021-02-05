@@ -11,7 +11,7 @@ export const Card = (props) => {
     let line = {
         position: 'absolute',
         bottom: '0',
-        height: '9px',
+        height: '4px',
         width: '100%',
         backgroundColor: '',
     }
