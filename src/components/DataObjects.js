@@ -3,7 +3,7 @@ import atl_bg from '../images/atl_bg.jpeg'
 import tetris_bg from '../images/tetris_bg.png'
 
 const atl = {
-    id: 7,
+    id: null,
     bgImage: {
         img1: atl_bg
     },
@@ -13,7 +13,7 @@ const atl = {
     size: cardSize.square
 }
 const tetris = {
-    id: 6,
+    id: null,
     bgImage: {
         img1: tetris_bg
     },
@@ -23,7 +23,7 @@ const tetris = {
     size: cardSize.square
 }
 const sweeper = {
-    id: 5,
+    id: null,
     bgImage: {
         img1: 'https://i.imgur.com/pQAzhTZ.png'
     },
@@ -33,7 +33,7 @@ const sweeper = {
     size: cardSize.square     
 }
 const jharding = {
-    id: 4,
+    id: null,
     bgImage: {
         img1: 'https://static1.squarespace.com/static/5b8ab570506fbef07bfc6874/t/5d34bc1aa472a70001dc183e/1563737122110/web-jharding-1.jpg',
         img2: 'https://static1.squarespace.com/static/5b8ab570506fbef07bfc6874/t/5d34bc3a809728000150c694/1563737155275/web-jharding-2.jpg',
@@ -45,7 +45,7 @@ const jharding = {
     size: cardSize.rect
 }
 const rdelooze = {
-    id: 3,
+    id: null,
     bgImage: {
         img1: 'https://static1.squarespace.com/static/5b8ab570506fbef07bfc6874/t/5c2a3bc44ae2379d32307198/1546271691216/web-rachel-delooze-1.jpg',
         img2: 'https://static1.squarespace.com/static/5b8ab570506fbef07bfc6874/t/5c2a3c664fa51a03a89bbd1f/1546271851755/web-rachel-delooze-2.jpg',
@@ -59,7 +59,7 @@ const rdelooze = {
     size: cardSize.rect
 }
 const ushuaia1 = {
-    id: 2,
+    id: null,
     bgImage: {
         img1: 'https://static1.squarespace.com/static/5b8ab570506fbef07bfc6874/5b8d1c9a40ec9a2651e91b44/5b8d95de88251b17eb3d66f6/1610886138221/Ushuaia-3.jpg?format=1000w'
     },
@@ -69,7 +69,7 @@ const ushuaia1 = {
     size: cardSize.rect
 }
 const iceberg = {
-    id: 1,
+    id: null,
     bgImage: {
         img1: 'https://images.squarespace-cdn.com/content/5b8ab570506fbef07bfc6874/1536004017547-EJVUJA61N1CMJ0UMBFWI/Antarctica-1.jpg?content-type=image%2Fjpeg'
     },
@@ -79,4 +79,13 @@ const iceberg = {
     size: cardSize.rect
 }   
 
-export const DataObjects = [atl, tetris, sweeper, jharding, rdelooze, ushuaia1, iceberg]
+var DataObjects = [atl, tetris, sweeper, jharding, rdelooze, ushuaia1, iceberg]
+
+var i = DataObjects.length;
+
+DataObjects.forEach((data) => {
+    data.id = i;
+    i--;
+})
+
+export { DataObjects };

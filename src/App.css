@@ -24,7 +24,7 @@
   box-shadow: var(--component-shadow);
   /* min-height: var(--card-height); */
   width: 100%;
-  margin: 20px 100px;
+  margin: 20px 400px;
   padding: 20px 50px;
   background-color: var(--content-window-colour);
   color: var(--alt-heading-colour);

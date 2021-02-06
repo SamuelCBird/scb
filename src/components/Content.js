@@ -1,13 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, Link, Route, Switch } from 'react-router-dom';
 import { Card } from './Card';
 import { DataObjects } from './DataObjects';
 import { Lightbox } from './Lightbox';
+import ls from 'local-storage';
 
 export const Content = ({match}) => {
     const location = useLocation().pathname.slice(1);
     const data = DataObjects;
-    const [welcomeVisible, setWelcomeVisible] = useState(true);
+    const [welcomeVisible, setWelcomeVisible] = useState(false);
+
+    useEffect(() => {
+        if (ls('scb_welcome_message') === false) {
+            setWelcomeVisible(false);
+        } 
+        else {
+            setWelcomeVisible(true);
+        }
+    }, [])
+
+    useEffect(() => {
+        ls("scb_welcome_message", welcomeVisible)
+    }, [welcomeVisible])
 
     const closeWelcome = () => {
         setWelcomeVisible(false);
