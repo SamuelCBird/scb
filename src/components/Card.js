@@ -1,8 +1,38 @@
 import React from 'react';
 import { cats, cardSize } from './DataEnums'
+import { AnimatePresence, motion } from 'framer-motion';
 import '../styles/Card.css'
 
 export const Card = (props) => {
+
+    const animateVariants = {
+        hidden: {
+            opacity: 0
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                ease: 'easeInOut'
+            }
+        },
+        hover: {
+            scale: 1.05,
+            y: -4,
+            rotateZ: [0, 1, 0, 1, 0],
+            transition: {
+                type: 'tween',
+                ease: 'easeInOut',
+                duration: 0.15
+            }
+        },
+        exit: {
+            opacity: 0,
+            transition: {
+                ease: 'easeInOut', 
+                duration: 2
+            }
+        }
+    }
     
     let cardStyle = {
         width: '160px',
@@ -39,9 +69,21 @@ export const Card = (props) => {
     }
 
     return (
-        <div id='card' style={ cardStyle }>
-            <div id='forhover'></div>
-            <div style={ line }></div>
-        </div>
+        <AnimatePresence exitBeforeEnter>
+            <motion.div id='card' style={ cardStyle }
+                variants={animateVariants}
+                initial='hidden'
+                animate='visible'
+                whileHover='hover'
+                exit='exit'
+            >
+                <motion.div id='forhover'
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 0.25 }}
+                    transition={{ type: 'tween', ease: 'easeInOut', duration: 0.15 }}
+                ></motion.div>
+                <div style={ line }></div>
+            </motion.div>
+        </AnimatePresence>
     )
 }

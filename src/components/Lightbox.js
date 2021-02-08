@@ -13,8 +13,7 @@ export const Lightbox = (props) => {
     const itemID = props.match.params.id;
     const [title, setTitle] = useState();
     const [descrip, setDescrip] = useState();
-    const [images, setImages] = useState();
-    
+    const [images, setImages] = useState(); 
 
     useEffect(() => {
         DataObjects.forEach(item => {

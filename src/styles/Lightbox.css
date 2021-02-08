@@ -28,6 +28,7 @@
     height: 100%;
     width: 100%;
     background-color: #000;
-    opacity: 0.5;
+    opacity: 0.2;
     z-index: 90;
+    cursor: url('../images/close_button.svg'), auto;
 }

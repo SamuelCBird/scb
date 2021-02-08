@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="40" height="40" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 32 32">
+<metadata>
+<vectornator:setting key="DimensionsVisible" value="1"/>
+<vectornator:setting key="SnapToGrid" value="0"/>
+<vectornator:setting key="SnapToPoints" value="0"/>
+<vectornator:setting key="GuidesVisible" value="1"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="SnapToEdges" value="0"/>
+<vectornator:setting key="DisplayWhiteBackground" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="GridSpacing" value="36"/>
+<vectornator:setting key="Units" value="Pixels"/>
+<vectornator:setting key="DynamicGuides" value="1"/>
+<vectornator:setting key="New" value="1"/>
+</metadata>
+<defs/>
+<g id="Layer 2" vectornator:layerName="Layer 2" visibility="hidden">
+<path d="M0+0L32+0L32+32L0+32L0+0Z" opacity="1" fill="#424242"/>
+</g>
+<g id="Layer 1" vectornator:layerName="Layer 1">
+<path stroke="#e7e7e7" stroke-width="0.9" d="M0.913907+15.9577C0.913907+7.67339+7.62964+0.957666+15.9139+0.957666C24.1982+0.957666+30.9139+7.67339+30.9139+15.9577C30.9139+24.2419+24.1982+30.9577+15.9139+30.9577C7.62964+30.9577+0.913907+24.2419+0.913907+15.9577Z" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="miter"/>
+<g opacity="1">
+<path stroke="#e7e7e7" stroke-width="1.87" d="M10.699+10.7428L21.1288+21.1725" fill="none" stroke-linecap="square" opacity="1" stroke-linejoin="miter"/>
+<path stroke="#e7e7e7" stroke-width="1.87" d="M21.1288+10.7428L10.699+21.1725" fill="none" stroke-linecap="square" opacity="1" stroke-linejoin="miter"/>
+</g>
+</g>
+</svg>
