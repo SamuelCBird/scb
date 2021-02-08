@@ -69,7 +69,6 @@ export const Card = (props) => {
     }
 
     return (
-        // <AnimatePresence exitBeforeEnter>
             <motion.div id='card' style={ cardStyle } 
                 key={props.data.id}
                 variants={animateVariants}
@@ -85,6 +84,5 @@ export const Card = (props) => {
                 ></motion.div>
                 <div style={ line }></div>
             </motion.div>
-        // </AnimatePresence>
     )
 }
