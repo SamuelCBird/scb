@@ -33,30 +33,33 @@ export const Content = ({match}) => {
         <div id="wrapper">
             <div className='content'>
 
-            <AnimatePresence>
-                {
-                    welcomeVisible && (
-                        <motion.div
-                        animate={{}}
-                        exit={{ opacity: 0 }}
-                        id="welcome_note">
-                            <div id="close_button" onClick={closeWelcome}>x</div>
-                            <h2>Hi, I'm Sam!</h2>
-                            <h3>Here are some of the things I've done. So why not get a cup of tea, make yourself at home and take a look around.</h3>
-                        </motion.div> 
-                    )
-                }
-            </AnimatePresence>
-                    { DataObjects.map((item, i) => {
-                        if ( map_location !== '' || map_location === 'misc' ) {
-                            if ( item.cat === map_location ) {
+                <AnimatePresence>
+                    {
+                        welcomeVisible && (
+                            <motion.div
+                            animate={{}}
+                            exit={{ opacity: 0 }}
+                            id="welcome_note">
+                                <div id="close_button" onClick={closeWelcome}>x</div>
+                                <h2>Hi, I'm Sam!</h2>
+                                <h3>Here are some of the things I've done. So why not get a cup of tea, make yourself at home and take a look around.</h3>
+                            </motion.div> 
+                        )
+                    }
+                </AnimatePresence>
+                {/* Probably wont keep these animations */}
+                <AnimatePresence exitBeforeEnter>
+                        { DataObjects.map((item, i) => {
+                            if ( map_location !== '' || map_location === 'misc' ) {
+                                if ( item.cat === map_location ) {
+                                    return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
+                                }
+                                return null
+                            } else {
                                 return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
                             }
-                            return null
-                        } else {
-                            return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
-                        }
-                    }) }
+                        }) }
+                </AnimatePresence>
             </div>
 
             <Switch>
