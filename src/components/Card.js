@@ -1,6 +1,6 @@
 import React from 'react';
 import { cats, cardSize } from './DataEnums'
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import '../styles/Card.css'
 
 export const Card = (props) => {
@@ -22,14 +22,14 @@ export const Card = (props) => {
             transition: {
                 type: 'tween',
                 ease: 'easeInOut',
-                duration: 0.15
+                duration: 0.3
             }
         },
         exit: {
             opacity: 0,
             transition: {
                 ease: 'easeInOut', 
-                duration: 2
+                duration: 0.3
             }
         }
     }
@@ -69,8 +69,9 @@ export const Card = (props) => {
     }
 
     return (
-        <AnimatePresence exitBeforeEnter>
-            <motion.div id='card' style={ cardStyle }
+        // <AnimatePresence exitBeforeEnter>
+            <motion.div id='card' style={ cardStyle } 
+                key={props.data.id}
                 variants={animateVariants}
                 initial='hidden'
                 animate='visible'
@@ -84,6 +85,6 @@ export const Card = (props) => {
                 ></motion.div>
                 <div style={ line }></div>
             </motion.div>
-        </AnimatePresence>
+        // </AnimatePresence>
     )
 }

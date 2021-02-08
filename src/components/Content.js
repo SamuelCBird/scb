@@ -48,9 +48,9 @@ export const Content = ({match}) => {
                     )
                 }
             </AnimatePresence>
-
+                <AnimatePresence exitBeforeEnter>
                     { data.map(item => {
-                        if ( map_location !== '' ) {
+                        if ( map_location !== '' || map_location === 'misc' ) {
                             if ( item.cat === map_location ) {
                                 return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
                             }
@@ -59,6 +59,7 @@ export const Content = ({match}) => {
                             return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
                         }
                     }) }
+                </AnimatePresence>
             </div>
 
             <Switch>
