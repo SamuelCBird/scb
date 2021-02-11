@@ -1,11 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import '../styles/Header.css';
 import music_svg from '../images/music.svg';
 import photo_svg from '../images/photo.svg';
 import prog_svg from '../images/prog.svg';
 
 export const Header = () => {
+
+    const hoverVariants = {
+        hover: {
+            scale: 0.95,
+            transition: {
+                type: 'tween',
+                ease: 'easeInOut',
+                duration: 0.2
+            }
+        }
+    }
 
     const [dimensions, setDimensions] = useState({
         height: window.innerHeight, 
@@ -41,24 +53,43 @@ export const Header = () => {
     return (
         <div id='header'>
             <div id='titleMainNav'>
-                <h1>
+                <motion.h1 variants={hoverVariants} whileHover='hover'>
                     <NavLink className='link' exact to='/'>{ dimensions.width < 960 ? 'scb' : 'samuelcbird' }</NavLink>
-                </h1>
+                </motion.h1>
                 <ul id="navList">
                     <NavLink className='link' activeClassName='activeLink' to='/music'>
-                        <li><div className="listItem" style={{backgroundImage: `url(${music_svg})`}}></div><div>{ dimensions.width < 960 ? null : 'music'}</div></li>
+                        <motion.li
+                            variants={hoverVariants}
+                            whileHover='hover'
+                        ><div className="listItem" style={{backgroundImage: `url(${music_svg})`}}></div><div>{ dimensions.width < 960 ? null : 'music'}</div></motion.li>
                     </NavLink>
                     <NavLink className='link' activeClassName='activeLink' to='/photography'>
-                        <li><div className='listItem' style={{backgroundImage: `url(${photo_svg})`}}></div><div>{ dimensions.width < 960 ? null : 'photography'}</div></li>
+                        <motion.li
+                            variants={hoverVariants}
+                            whileHover='hover'
+                        ><div className='listItem' style={{backgroundImage: `url(${photo_svg})`}}></div><div>{ dimensions.width < 960 ? null : 'photography'}</div></motion.li>
                     </NavLink>
                     <NavLink className='link' activeClassName='activeLink' to='/programming'>
-                        <li><div className='listItem' style={{backgroundImage: `url(${prog_svg})`}}></div><div>{ dimensions.width < 960 ? null : 'programming'}</div></li>
+                        <motion.li
+                            variants={hoverVariants}
+                            whileHover='hover'
+                        ><div className='listItem' style={{backgroundImage: `url(${prog_svg})`}}></div><div>{ dimensions.width < 960 ? null : 'programming'}</div></motion.li>
                     </NavLink>
                 </ul>
             </div>
             <ul id='navList2'>
-                <NavLink className='link' activeClassName='activeLink' to='/about'><li>about</li></NavLink>
-                <NavLink className='link' activeClassName='activeLink' to='/curriculumvitae'><li>cv</li></NavLink>
+                <NavLink className='link' activeClassName='activeLink' to='/about'>
+                    <motion.li
+                        variants={hoverVariants}
+                        whileHover='hover'
+                    >about</motion.li>
+                </NavLink>
+                <NavLink className='link' activeClassName='activeLink' to='/curriculumvitae'>
+                    <motion.li
+                        variants={hoverVariants}
+                        whileHover='hover'
+                    >cv</motion.li>
+                </NavLink>
             </ul>
         </div>
     )
