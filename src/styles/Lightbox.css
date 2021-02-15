@@ -15,20 +15,20 @@
     margin: 30px;
     display: flex;
     flex-direction: column;
-    background-color: var(--content-window-colour);
+    background-color: var(--local-white);
     width: 800px;
     height: 70vh;
     z-index: 100;
     overflow: scroll;
-    border: 15px solid var(--content-window-colour);
+    border: 15px solid var(--local-white);
     border-radius: var(--content-border-radius);
+    color: var(--local-black);
 }
 #blackout {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: #000;
-    opacity: 0.2;
+    background-color: hsla(0, 0%, 14%, 50%);
     z-index: 90;
     cursor: url('../images/close_button.svg'), auto;
 }

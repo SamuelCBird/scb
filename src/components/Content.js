@@ -22,8 +22,9 @@ export const Content = ({match}) => {
     }, [])
 
     useEffect(() => {
+        document.title = map_location ? `${map_location} - samuelcbird` : 'samuelcbird';
         ls("scb_welcome_message", welcomeVisible)
-    }, [welcomeVisible])
+    }, [welcomeVisible, location])
 
     const closeWelcome = () => {
         setWelcomeVisible(false);
@@ -47,28 +48,27 @@ export const Content = ({match}) => {
                         )
                     }
                 </AnimatePresence>
-                {/* Probably wont keep these animations */}
-                <AnimatePresence exitBeforeEnter>
                         { DataObjects.map((item, i) => {
                             if ( map_location !== '' || map_location === 'misc' ) {
                                 if ( item.cat === map_location ) {
-                                    return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
+                                    return <Link to={`/${item.cat}/${item.id}`} key={item.id} ><Card data={item} key={item.id} /></Link>
                                 }
                                 return null
                             } else {
                                 return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
                             }
                         }) }
-                </AnimatePresence>
             </div>
 
             <Switch>
-                <LastLocationProvider>
-                    <Route exact path={`${match.path}/:id`} 
-                        render={(props) => (
-                            <Lightbox {...props} />
-                        )} />
-                </LastLocationProvider>
+                    <LastLocationProvider>
+                        <Route exact path={`${match.path}/:id`} 
+                            render={(props) => (
+                                <AnimatePresence>
+                                    <Lightbox {...props} />
+                                </AnimatePresence>
+                            )} />
+                    </LastLocationProvider>
             </Switch>
         </div>
     )

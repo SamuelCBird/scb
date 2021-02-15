@@ -10,7 +10,8 @@ export const Header = () => {
 
     const hoverVariants = {
         hover: {
-            scale: 0.95,
+            scale: 0.98,
+            rotateZ: 2,
             transition: {
                 type: 'tween',
                 ease: 'easeInOut',
@@ -53,6 +54,7 @@ export const Header = () => {
     return (
         <div id='header'>
             <div id='titleMainNav'>
+                <div id='favicon_logo'></div>
                 <motion.h1 variants={hoverVariants} whileHover='hover'>
                     <NavLink className='link' exact to='/'>{ dimensions.width < 960 ? 'scb' : 'samuelcbird' }</NavLink>
                 </motion.h1>

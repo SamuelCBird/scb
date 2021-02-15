@@ -3,34 +3,35 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    background-color: #232323;
+    background-color: var(--local-black);
     height: 90px;
     margin: 0;
     width: 100%;
     min-width: 340px;
     align-items: center;
   }
-
   #header a {
     display: flex;
-    
   }
   .link {
     position: relative;
-    color: #E7E7E7;
+    color: var(--local-white);
     text-decoration: none;
+    transition: transform 150ms;
+    transition-timing-function: ease-in-out;
   }
   .activeLink {
-    top: -10px;
+    transform: translateY(-10px);
   }
   #header h1 {
-    color: #E7E7E7;
+    color: var(--local-white);
   }
   #titleMainNav {
     display: flex;
+    align-items: center;
   }
   #header ul {
-    color: #E7E7E7;
+    color: var(--local-white);
     margin: 0 0 0 30px;
     font-family: 'Poppins';
     font-weight: 300;

@@ -6,15 +6,6 @@ import '../styles/Card.css'
 export const Card = (props) => {
 
     const animateVariants = {
-        hidden: {
-            opacity: 0
-        },
-        visible: {
-            opacity: 1,
-            transition: {
-                ease: 'easeInOut'
-            }
-        },
         hover: {
             scale: 1.05,
             y: -4,
@@ -22,13 +13,6 @@ export const Card = (props) => {
             transition: {
                 type: 'tween',
                 ease: 'easeInOut',
-                duration: 0.3
-            }
-        },
-        exit: {
-            opacity: 0,
-            transition: {
-                ease: 'easeInOut', 
                 duration: 0.3
             }
         }
@@ -70,12 +54,8 @@ export const Card = (props) => {
 
     return (
             <motion.div id='card' style={ cardStyle } 
-                key={props.data.id}
                 variants={animateVariants}
-                initial='hidden'
-                animate='visible'
                 whileHover='hover'
-                exit='exit'
             >
                 <motion.div id='forhover'
                     initial={{ opacity: 0 }}
