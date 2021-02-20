@@ -5,7 +5,6 @@ import { Footer } from './components/Footer';
 import { Content } from './components/Content';
 import { NotFound } from './components/NotFound';
 import { About } from './components/About';
-import { CurriculumVitae } from './components/CurriculumVitae';
 import './App.css';
 import './styles/global.css';
 
@@ -19,7 +18,7 @@ const App = (match) => {
             <Route path='/photography' component={Content} />
             <Route path='/programming' component={Content} />
             <Route path='/about' component={About} />
-            <Route path='/curriculumvitae' component={CurriculumVitae} />
+            {/* <Route path='/curriculumvitae' component={CurriculumVitae} /> */}
             <Route component={NotFound} />
         </Switch>
       <Footer />

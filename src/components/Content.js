@@ -22,9 +22,8 @@ export const Content = ({match}) => {
     }, [])
 
     useEffect(() => {
-        document.title = map_location ? `${map_location} - samuelcbird` : 'samuelcbird';
         ls("scb_welcome_message", welcomeVisible)
-    }, [welcomeVisible, location])
+    }, [welcomeVisible])
 
     const closeWelcome = () => {
         setWelcomeVisible(false);
@@ -49,7 +48,7 @@ export const Content = ({match}) => {
                     }
                 </AnimatePresence>
                         { DataObjects.map((item, i) => {
-                            if ( map_location !== '' || map_location === 'misc' ) {
+                            if ( map_location !== '' ) {
                                 if ( item.cat === map_location ) {
                                     return <Link to={`/${item.cat}/${item.id}`} key={item.id} ><Card data={item} key={item.id} /></Link>
                                 }
@@ -64,9 +63,7 @@ export const Content = ({match}) => {
                     <LastLocationProvider>
                         <Route exact path={`${match.path}/:id`} 
                             render={(props) => (
-                                <AnimatePresence>
                                     <Lightbox {...props} />
-                                </AnimatePresence>
                             )} />
                     </LastLocationProvider>
             </Switch>

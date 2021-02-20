@@ -25,6 +25,8 @@ import clhanger from '../data_images/programming/hangman.png'
 import tram from '../data_images/programming/trample.png'
 import alca from '../data_images/travel/alcatraz.jpg'
 import mykitty from '../data_images/travel/mykonos-cat.png'
+import santo from '../data_images/travel/santorini1.png'
+import val_rose from '../data_images/travel/valetta_rose.png'
 
 const yam = {
     id: null,
@@ -306,10 +308,29 @@ const mykonos1 = {
     cat: cats.photo,
     size: cardSize.rect
 }
+const santorini = {
+    id: null,
+    bgImage: {
+        img1: santo
+    },
+    title: 'Santorini, Greece',
+    descrip: 'Santorini, found in the South Aegean sea, is that picturesque location you\'ll have seen on postcards or travel agents advertisements.',
+    cat: cats.photo,
+    size: cardSize.rect
+}
+const valetta_rose = {
+    id: null,
+    bgImage: {
+        img1: val_rose
+    },
+    title: 'Friends',
+    descrip: 'This photograph sums up a lot for me. When it was taken I was spending an afternoon with a couple of friends at a small cafe in Valetta, Malta. Of course it reminds me of the beautiful island; and of the magic of happiness; but also it reaffirms my gratitude for having made so many wonderful friends that I know are everlasting.',
+    cat: cats.photo,
+    size: cardSize.rect
+}
 
 
-
-var DataObjects = [sburrell2, trample, atl, jsanchez1, ggaletto1, tetris, sweeper, invoicedb, yam, tmh, dsmart2, dsmart1, wanderingwestduo, jharding2, jharding1, rwaugh1, rdelooze, dferg, abimp, met_you, hollow, alcatraz, forgive, ushuaia1, iceberg, ret, hangman, mykonos1]
+var DataObjects = [sburrell2, trample, atl, jsanchez1, ggaletto1, tetris, sweeper, invoicedb, yam, tmh, dsmart2, dsmart1, wanderingwestduo, jharding2, jharding1, rwaugh1, rdelooze, dferg, abimp, met_you, hollow, alcatraz, forgive, ushuaia1, iceberg, ret, hangman, valetta_rose, santorini, mykonos1]
 
 var i = DataObjects.length;
 

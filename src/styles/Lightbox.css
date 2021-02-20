@@ -13,7 +13,7 @@
 #lightbox-content {
     box-sizing: border-box;
     margin: 30px;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     background-color: var(--local-white);
     width: 800px;

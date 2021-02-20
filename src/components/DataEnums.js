@@ -2,7 +2,7 @@ export const cats = {
     music: 'music',
     photo: 'photography',
     prog: 'programming',
-    scb: 'samuelcbird'
+    misc: 'misc'
 }
 export const cardSize = {
     square: 'square',

@@ -86,12 +86,12 @@ export const Header = () => {
                         whileHover='hover'
                     >about</motion.li>
                 </NavLink>
-                <NavLink className='link' activeClassName='activeLink' to='/curriculumvitae'>
+                {/* <NavLink className='link' activeClassName='activeLink' to='/curriculumvitae'>
                     <motion.li
                         variants={hoverVariants}
                         whileHover='hover'
                     >cv</motion.li>
-                </NavLink>
+                </NavLink> */}
             </ul>
         </div>
     )
