@@ -8,6 +8,8 @@ import { About } from './components/About';
 import './App.css';
 import './styles/global.css';
 
+import ContentWithDB from './components/ContentWithDB';
+
 const App = (match) => {
   return (
     <div> 
@@ -18,6 +20,7 @@ const App = (match) => {
             <Route path='/photography' component={Content} />
             <Route path='/programming' component={Content} />
             <Route path='/about' component={About} />
+            <Route path='/firestore' component={ContentWithDB} />
             {/* <Route path='/curriculumvitae' component={CurriculumVitae} /> */}
             <Route component={NotFound} />
         </Switch>
