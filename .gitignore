@@ -22,9 +22,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .eslintcache
-
-# firestore api secret info
-/src/components/Firestore.js
-
-# content images 
-/src/data_images
