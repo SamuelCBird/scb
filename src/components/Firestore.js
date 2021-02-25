@@ -20,4 +20,3 @@ var storage = firebase.storage().ref()
 
 export {db, storage};
 
-// wah wah 
