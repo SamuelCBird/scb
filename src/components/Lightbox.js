@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { useLastLocation } from 'react-router-last-location';
 import { useHistory, Link } from 'react-router-dom';
-import { DataObjects } from './DataObjects';
+// import { DataObjects } from './DataObjects';
 import { ImageView } from './ImageView';
+import { db } from './FirestoreSecret';
 import '../styles/Lightbox.css';
+// import { set } from 'local-storage';
 
 export const Lightbox = (props) => {
     const history = useHistory();
     const lastLocation = useState(useLastLocation());
-    const itemID = props.match.params.id;
+    const itemLink = props.match.params.id;
     const [title, setTitle] = useState();
     const [descrip, setDescrip] = useState();
-    const [images, setImages] = useState();
+    const [imageRef, setImageRef] = useState();
     const [notFound, setNotFound] = useState(false);
 
     useEffect(() => {
-        if (DataObjects.length < itemID) {
+        const query = db.collection('portfolio_data').where('link', '==', itemLink).get();
+        query.then(snapshot => {
+            const data = snapshot.docs.map(doc => doc.data())[0];
+            setTitle(data.title)
+            setDescrip(data.description)
+            setImageRef(data.image)
+        }).catch((error) => {
             setNotFound(true);
-        } else {
-            DataObjects.forEach(item => {
-                if (item.id.toString() === itemID) {
-                    setTitle(item.title);
-                    setDescrip(item.descrip);
-                    setImages(item.bgImage);
-                }
-            })
-        }
-    }, [itemID])
+        })
+    }, [itemLink])
 
     const exitLightbox = () => {
         if (lastLocation[0] !== null) {
@@ -42,7 +42,7 @@ export const Lightbox = (props) => {
 
                 <div id='blackout' onClick={() => { exitLightbox() } }></div>
                 <div id="lightbox-content">
-                    <ImageView imgs={images}/>
+                    <ImageView imgs={imageRef}/>
                     <div style={{padding: '10px'}}>
                         <h2>{title}</h2>
                         <p>{descrip}</p>

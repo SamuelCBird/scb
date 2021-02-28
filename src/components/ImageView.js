@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { storage } from './FirestoreSecret';
 import '../styles/ImageView.css';
 
 export const ImageView = (props) => {
+    const [imageURL, setImageURL] = useState();
+
+    useEffect(() => {
+        storage.ref(props.imgs).getDownloadURL().then(url => {
+            setImageURL(url);
+        })
+    }, [props.imgs])
 
     let imageDisplay = {
-        backgroundImage: `url()`
-    }
-
-    if (props.imgs) {
-        // populate image
-        const image = props.imgs.img1;
-        imageDisplay.backgroundImage = `url(${image})`;
+        backgroundImage: `url(${imageURL})`
     }
 
     return (
