@@ -1,9 +1,12 @@
-import React from 'react';
-import { cats, cardSize } from './DataEnums'
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Card.css'
+import { storage } from './FirestoreSecret';
 
 export const Card = (props) => {
+    const [imageURL, setImageURL] = useState();
+    const [cardSize, setCardSize] = useState(160);
+    const [lineColour, setLineColour] = useState();
 
     const animateVariants = {
         hover: {
@@ -17,40 +20,42 @@ export const Card = (props) => {
             }
         }
     }
-    
+
     let cardStyle = {
-        width: '160px',
-        backgroundImage: '',
+        width: `${cardSize}px`,
+        backgroundImage: `url(${imageURL})`,
     }
     let line = {
         position: 'absolute',
         bottom: '0',
         height: '4px',
         width: '100%',
-        backgroundColor: '',
+        backgroundColor: `${lineColour}`,
     }
-
-    if ( props.data ) {
-        // populate bg image
-        const image = props.data.bgImage.img1;
-        cardStyle.backgroundImage = `url(${image})`;
+    
+    useEffect(() => {
+        // card size
+        if ( props.data.size === 'square' ) {
+            setCardSize(160)
+        } else {
+            setCardSize(200);
+        }
 
         // colour line
-        if ( props.data.cat === cats.music ) {
-            line.backgroundColor = '#A9DCAE';
-        } else if ( props.data.cat === cats.photo ) {
-            line.backgroundColor = '#FEAD73';
+        if ( props.data.category === 'music' ) {
+            setLineColour('#A9DCAE');
+        } else if ( props.data.category === 'photography' ) {
+            setLineColour('#FEAD73');
         } else {
-            line.backgroundColor = '#C893F1';
+            setLineColour('#C893F1');
         }
+    }, [props.data.size, props.data.category])
 
-        // rect or square
-        if ( props.data.size === cardSize.square ) {
-            cardStyle.width = '160px';
-        } else {
-            cardStyle.width = '200px';
-        }
-    }
+    useEffect(() => {
+        storage.ref(props.data.image).getDownloadURL().then(url => {
+            setImageURL(url);
+        })
+    }, [props.data.image])
 
     return (
             <motion.div id='card' style={ cardStyle } 

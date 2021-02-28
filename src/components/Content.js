@@ -4,15 +4,22 @@ import { LastLocationProvider } from 'react-router-last-location';
 import { Card } from './Card';
 import { DataObjects } from './DataObjects';
 import { Lightbox } from './Lightbox';
-import { getData } from './FirestoreFunctions';
+import { db } from './FirestoreSecret';
 // import { motion, AnimatePresence } from 'framer-motion';
 
 export const Content = ({match}) => {
     const location = useLocation();
     const map_location = location.pathname.slice(1);
-    const [data, setData] = useState(getData());
+    const [data, setData] = useState();
 
-    console.log(data)
+    useEffect(() => {
+        db.collection('portfolio_data')
+            .get()
+            .then(snapshot => {
+                const data = snapshot.docs.map(doc => doc.data());
+                setData(data);
+            })
+    }, [])
 
     return (
         <div id="wrapper">
@@ -29,11 +36,12 @@ export const Content = ({match}) => {
                             }
                         }) } */}
 
-                        {
-                            data.map(item => {
-                                return <Card data={item} key={item.id} />
-                            })
-                        }
+                  { data && (
+                      data.map(doc => {
+                          return <Card data={doc} key={doc.id} />
+                      })
+                  ) }
+
             </div>
 
             <Switch>
