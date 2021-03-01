@@ -13,41 +13,28 @@ export const Content = ({match}) => {
     const [data, setData] = useState();
 
     useEffect(() => {
-        if (map_location !== '') {
-            db.collection('portfolio_data').where('category', '==', map_location)
-                .get()
-                .then(snapshot => {
-                    const data = snapshot.docs.map(doc => [doc.id, doc.data()]);
-                    setData(data);
-                })
-        } else {
-            db.collection('portfolio_data')
-                .get()
-                .then(snapshot => {
-                    const data = snapshot.docs.map(doc =>  [doc.id, doc.data()]);
-                    setData(data);
-                })
-            }
+        db.collection('portfolio_data').orderBy('date', 'desc')
+            .get()
+            .then(snapshot => {
+                const data = snapshot.docs.map(doc =>  [doc.id, doc.data()]);
+                setData(data);
+            })
     }, [ map_location])
 
     return (
         <div id="wrapper">
             <div className='content'>
 
-                {/* { DataObjects.map((item, i) => {
-                    if ( map_location !== '' ) {
-                        if ( item.cat === map_location ) {
-                            return <Link to={`/${item.cat}/${item.id}`} key={item.id} ><Card data={item} key={item.id} /></Link>
-                        }
-                        return null
-                    } else {
-                        return <Link to={`/${item.cat}/${item.id}`} key={item.id}><Card data={item} key={item.id} /></Link>
-                    }
-                }) } */}
-
                 { data && (
                     data.map(doc => {
-                    return <Link to={`/${doc[1].category}/${doc[1].link}`} key={doc[0]}><Card key={doc[0]} data={doc[1]} /></Link>
+                        if (map_location !== '') {
+                            if (doc[1].category === map_location) {
+                                return <Link to={`/${doc[1].category}/${doc[1].page_url}`} key={doc[0]}><Card key={doc[0]} data={doc[1]} /></Link>
+                            }
+                            return null
+                        } else {
+                            return <Link to={`/${doc[1].category}/${doc[1].page_url}`} key={doc[0]}><Card key={doc[0]} data={doc[1]} /></Link>
+                        }
                     })
                 ) }
 

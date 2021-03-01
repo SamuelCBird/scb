@@ -15,7 +15,7 @@ export const Lightbox = (props) => {
     const [notFound, setNotFound] = useState(false);
 
     useEffect(() => {
-        const query = db.collection('portfolio_data').where('link', '==', itemLink).get();
+        const query = db.collection('portfolio_data').where('page_url', '==', itemLink).get();
         query.then(snapshot => {
             const data = snapshot.docs.map(doc => doc.data())[0];
             setTitle(data.title)

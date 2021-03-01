@@ -1,8 +1,6 @@
 #imageViewImage {
-    flex-grow: 2;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 250px;
+    min-height: 200px;
+    object-fit: contain;
     border-radius: 20px;
+    overflow: scroll;
 }

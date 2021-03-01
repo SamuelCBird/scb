@@ -4,22 +4,22 @@ import '../styles/ImageView.css';
 
 export const ImageView = (props) => {
     const [imageURL, setImageURL] = useState();
+    const [hasLoaded, sethasLoaded] = useState(false);
 
     useEffect(() => {
         const reference = storage.ref(props.imgs)
         
         reference.getDownloadURL().then(url => {
             setImageURL(url);
+            setTimeout(sethasLoaded(true), 5000);
         }).catch(error => {
             // Avoids error in console. I think error is bug, doesn't seem to affect the working of the component.
         })
     }, [props.imgs])
 
-    let imageDisplay = {
-        backgroundImage: `url(${imageURL})`
+    if (hasLoaded) {
+        return <img id="imageViewImage" src={imageURL} alt=' '></img>
+    } else {
+        return <div></div>
     }
-
-    return (
-            <div style={imageDisplay} id="imageViewImage"></div>
-    )
 }
