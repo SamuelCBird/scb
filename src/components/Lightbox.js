@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useLastLocation } from 'react-router-last-location';
 import { useHistory, Link } from 'react-router-dom';
-// import { DataObjects } from './DataObjects';
 import { ImageView } from './ImageView';
 import { db } from './FirestoreSecret';
 import '../styles/Lightbox.css';
-// import { set } from 'local-storage';
 
 export const Lightbox = (props) => {
     const history = useHistory();
@@ -23,7 +21,7 @@ export const Lightbox = (props) => {
             setTitle(data.title)
             setDescrip(data.description)
             setImageRef(data.image)
-        }).catch((error) => {
+        }).catch(error => {
             setNotFound(true);
         })
     }, [itemLink])

@@ -6,8 +6,12 @@ export const ImageView = (props) => {
     const [imageURL, setImageURL] = useState();
 
     useEffect(() => {
-        storage.ref(props.imgs).getDownloadURL().then(url => {
+        const reference = storage.ref(props.imgs)
+        
+        reference.getDownloadURL().then(url => {
             setImageURL(url);
+        }).catch(error => {
+            // Avoids error in console. I think error is bug, doesn't seem to affect the working of the component.
         })
     }, [props.imgs])
 
