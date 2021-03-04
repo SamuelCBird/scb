@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# [samuelcbird.co.uk](http://www.samuelcbird.co.uk)
+## A Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+First and foremost I wanted to create a website where I could showcase personal projects and achievements, with one of those being the website itself. But additionally, as an aspiring front end developer, I wanted a project to push my learning.
 
-## Available Scripts
+## Current Status
 
-In the project directory, you can run:
+Version 1.0 is currently live at the link above. I am currently working on Version 1.1.
 
-### `npm start`
+## Overview and Current Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- The homepage features a card based design, with each card a link that opens a lightbox or modal that displays the information for that project.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- As the information in the lightbox is important, (rather than a pop up '*Subscribe to this newsletter*', I wanted to make sure they had links so that it would be possible to direct people to specific projects if I wanted to.
 
-### `npm test`
+- The navbar has three links (Music, Photography and Programming) that act as a filter to the selectable projects.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- In Version 1.0 the data is held in a separate Javascript file and exported as an array of objects. 
 
-### `npm run build`
+- It responsive to different browser window sizes, and mobile devices. The header component has an event listener enabling programatically to be able to adjust and remove text to accommodate mobile browsers, without compromising the useability of the wesbite.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The hover animations are all created with the Framer Motion API.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Currently I'm working on integrating a Firebase Firestore database to hold all the project data and Firestore Storage to hold the images. This meaning that I can add new projects without having to rebuild and republish the React site.
 
-### `npm run eject`
+- I'm also planning to build a photo carosel so that I can include more photographs in each project, and the user can flick through them.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Screenshots
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### The homepage of the website, whilst hovering on one of the cards.
+![homepage](/screenshots/homepage.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Homepage filtered with the link in the navbar.
+![filtered](/screenshots/filtered.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### The lightbox showing one of the projects.
+![lightbox](/screenshots/lightbox.png)
