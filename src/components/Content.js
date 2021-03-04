@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, Link, Route, Switch } from 'react-router-dom';
 import { LastLocationProvider } from 'react-router-last-location';
 import { Card } from './Card';
-// import { DataObjects } from './DataObjects';
 import { Lightbox } from './Lightbox';
 import { db } from './FirestoreSecret';
 // import { motion, AnimatePresence } from 'framer-motion';
