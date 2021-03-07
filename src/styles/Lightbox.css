@@ -32,3 +32,7 @@
     z-index: 90;
     cursor: url('../images/close_button.svg'), auto;
 }
+#lightbox-description {
+    display: flexbox;
+    margin: 30px 10px 10px 10px;
+}

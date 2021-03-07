@@ -11,7 +11,7 @@ export const ImageView = (props) => {
         
         reference.getDownloadURL().then(url => {
             setImageURL(url);
-            setTimeout(sethasLoaded(true), 5000);
+            sethasLoaded(true);
         }).catch(error => {
             // Avoids error in console. I think error is bug, doesn't seem to affect the working of the component.
         })

@@ -41,7 +41,7 @@ export const Lightbox = (props) => {
                 <div id='blackout' onClick={() => { exitLightbox() } }></div>
                 <div id="lightbox-content">
                     <ImageView imgs={imageRef}/>
-                    <div style={{padding: '10px'}}>
+                    <div id='lightbox-description'>
                         <h2>{title}</h2>
                         <p>{descrip}</p>
                         
@@ -56,7 +56,7 @@ export const Lightbox = (props) => {
 
                 <div id='blackout' onClick={() => { exitLightbox() } }></div>
                 <div id="lightbox-content">
-                    <div style={{padding: '10px'}} className='on_paper'>
+                    <div style={{margin: '10px'}}>
                         <h1>Not Found</h1>
                         <br />
                         <p>You've lost your way!</p>
