@@ -44,6 +44,7 @@ export const Lightbox = (props) => {
                     <div style={{padding: '10px'}}>
                         <h2>{title}</h2>
                         <p>{descrip}</p>
+                        
                     </div>
                 </div>
 
