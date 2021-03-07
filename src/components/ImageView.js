@@ -11,7 +11,7 @@ export const ImageView = (props) => {
         
         reference.getDownloadURL().then(url => {
             setImageURL(url);
-            // sethasLoaded(true);
+            sethasLoaded(true)
         }).catch(error => {
             // Avoids error in console. I think error is bug, doesn't seem to affect the working of the component.
         })
@@ -21,7 +21,7 @@ export const ImageView = (props) => {
         return <img id="imageViewImage" src={imageURL} alt=' '></img>
     } else {
         return (
-            <div id='imageViewImage' className='flower'>
+            <div id='imageViewImage' className='loader'>
                 <div></div>
                 <div></div>
                 <div></div>
