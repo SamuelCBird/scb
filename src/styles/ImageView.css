@@ -4,3 +4,22 @@
     border-radius: 20px;
     overflow: scroll;
 }
+.flower {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.flower div {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    border-radius: 12px;
+    background-color: var(--local-black);
+    animation: bouncer 0.5s ease infinite alternate;
+}
+
+@keyframes bouncer {
+    from { transform: translateY(0) }
+    to { transform: translateY(-50) }
+}
