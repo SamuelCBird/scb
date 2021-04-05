@@ -4,6 +4,7 @@ import { LastLocationProvider } from 'react-router-last-location';
 import { Card } from './Card';
 import { Lightbox } from './Lightbox';
 import { db } from './FirestoreSecret';
+import { Hero } from './Hero';
 // import { motion, AnimatePresence } from 'framer-motion';
 
 export const Content = ({match}) => {

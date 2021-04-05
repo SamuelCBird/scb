@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 1440 320">
+<metadata>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="Units" value="Points"/>
+<vectornator:setting key="DynamicGuides" value="1"/>
+<vectornator:setting key="GuidesVisible" value="1"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="GridSpacing" value="36"/>
+</metadata>
+<defs/>
+<g id="Untitled" vectornator:layerName="Untitled">
+<path d="M1440+50.121L1380+75.1815C1320+100.242+1200+150.363+1080+158.743C960+166.809+840+133.917+720+121.152C600+108.857+480+116.688+360+112.772C240+108.857+120+91.6275+60+83.5611L0+75.1815L0+0L60+0C120+0+240+0+360+0C480+0+600+0+720+0C840+0+960+0+1080+0C1200+0+1320+0+1380+0L1440+0L1440+50.121Z" opacity="0.396476" fill="#4b4b4b"/>
+<path d="M0+204.305L60+183.875C120+163.444+240+122.583+360+129.351C480+136.629+600+190.259+720+190.643C840+190.259+960+136.629+1080+95.3851C1200+54.9071+1320+26.8151+1380+13.6629L1440+0L1440+0L1380+0C1320+0+1200+0+1080+0C960+0+840+0+720+0C600+0+480+0+360+0C240+0+120+0+60+0L0+0L0+204.305Z" opacity="0.463339" fill="#4b4b4b"/>
+<path d="M2.27374e-13+144.993L60.7408+163.118C121.482+181.242+242.963+217.49+364.445+199.366C485.926+181.242+607.408+108.745+728.889+78.5003C850.371+48.7087+971.852+60.0363+1093.33+78.5003C1214.82+96.2847+1336.3+121.205+1397.04+132.873L1457.78+144.993L1457.78+0L1397.04+0C1336.3+0+1214.82+0+1093.33+0C971.852+0+850.371+0+728.889+0C607.408+0+485.926+0+364.445+0C242.963+0+121.482+0+60.7408+0L2.27374e-13+0L2.27374e-13+144.993Z" opacity="0.462916" fill="#4b4b4b"/>
+<path d="M0+102.153L60+98.7689C120+95.1297+240+88.7452+360+78.3384C480+68.3147+600+54.2686+720+44.2449C840+33.8381+960+27.4536+1080+34.0296C1200+40.8611+1320+61.2916+1380+71.5069L1440+81.7222L1440+0L1380+0C1320+0+1200+0+1080+0C960+0+840+0+720+0C600+0+480+0+360+0C240+0+120+0+60+0L0+0L0+102.153Z" opacity="0.812077" fill="#4b4b4b"/>
+</g>
+</svg>

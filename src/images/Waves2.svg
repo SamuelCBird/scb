@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 1440 320">
+<metadata>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="Units" value="Points"/>
+<vectornator:setting key="DynamicGuides" value="1"/>
+<vectornator:setting key="GuidesVisible" value="1"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="GridSpacing" value="36"/>
+</metadata>
+<defs/>
+<g id="Untitled" vectornator:layerName="Untitled">
+<path d="M1440+30.7085L1380+46.0627C1320+61.417+1200+92.1255+1080+97.2595C960+102.202+840+82.0492+720+74.2282C600+66.695+480+71.4932+360+69.0941C240+66.695+120+56.139+60+51.1968L0+46.0627L0+0L60+0C120+0+240+0+360+0C480+0+600+0+720+0C840+0+960+0+1080+0C1200+0+1320+0+1380+0L1440+0L1440+30.7085Z" opacity="0.81" fill="#282828"/>
+<path d="M0+160L60+144C120+128+240+96+360+101.3C480+107+600+149+720+149.3C840+149+960+107+1080+74.7C1200+43+1320+21+1380+10.7L1440+0L1440+0L1380+0C1320+0+1200+0+1080+0C960+0+840+0+720+0C600+0+480+0+360+0C240+0+120+0+60+0L0+0L0+160Z" opacity="0.81" fill="#282828"/>
+<path d="M2.27374e-13+88.8355L60.7408+99.94C121.482+111.044+242.963+133.253+364.445+122.149C485.926+111.044+607.408+66.6266+728.889+48.0961C850.371+29.8432+971.852+36.7835+1093.33+48.0961C1214.82+58.9923+1336.3+74.2609+1397.04+81.4094L1457.78+88.8355L1457.78+0L1397.04+0C1336.3+0+1214.82+0+1093.33+0C971.852+0+850.371+0+728.889+0C607.408+0+485.926+0+364.445+0C242.963+0+121.482+0+60.7408+0L2.27374e-13+0L2.27374e-13+88.8355Z" opacity="0.81" fill="#282828"/>
+<path d="M0+98.0299L60+94.7826C120+91.2903+240+85.1635+360+75.1767C480+65.5575+600+52.0784+720+42.4592C840+32.4724+960+26.3455+1080+32.6562C1200+39.212+1320+58.8179+1380+68.6209L1440+78.4239L1440+0L1380+0C1320+0+1200+0+1080+0C960+0+840+0+720+0C600+0+480+0+360+0C240+0+120+0+60+0L0+0L0+98.0299Z" opacity="0.81" fill="#282828"/>
+</g>
+</svg>

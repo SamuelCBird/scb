@@ -5,12 +5,14 @@ import { Footer } from './components/Footer';
 import { Content } from './components/Content';
 import { NotFound } from './components/NotFound';
 import { About } from './components/About';
+import { Hero } from './components/Hero';
 import './App.css';
 import './styles/global.css';
 
 const App = (match) => {
   return (
     <div> 
+      {/* <Hero /> */}
       <Header />
         <Switch>
             <Route exact path='/' component={Content} />

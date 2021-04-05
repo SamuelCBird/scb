@@ -18,6 +18,13 @@
     box-shadow: var(--component-shadow);
     /* min-width: 260px; */
     flex-shrink: 2;
+
+    background: rgba( 231, 231, 231, 0.70 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .on_paper h1 {
     font-family: var(--cv-heading-font), sans-serif;
