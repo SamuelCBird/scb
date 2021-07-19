@@ -27,6 +27,8 @@ import alca from '../data_images/travel/alcatraz.jpg'
 import mykitty from '../data_images/travel/mykonos-cat.png'
 import santo from '../data_images/travel/santorini1.png'
 import val_rose from '../data_images/travel/valetta_rose.png'
+import port_ss from '../data_images/programming/portfolio.png'
+import sudoku from '../data_images/programming/sudoku.png'
 
 const yam = {
     id: null,
@@ -328,9 +330,28 @@ const valetta_rose = {
     cat: cats.photo,
     size: cardSize.rect
 }
+const portfolio = {
+    id: null,
+    bgImage: {
+        img1: port_ss
+    },
+    title: 'Portfolio Website',
+    descrip: 'I designed this portfolio site in Figma, and built it with HTML, CSS and React. I used the Framer Motion library and CSS for animations. As my first full project, I am very proud of it. But now I am looking at ways that I can improve and refine it for a better user experience and a more sleek design.',
+    cat: cats.prog,
+    size: cardSize.rect
+}
+const sudoku_site = {
+    id: null,
+    bgImage: {
+        img1: sudoku
+    },
+    title: 'Sudoku solver',
+    descrip: "I've always enjoyed a sudoku puzzle, and the logic behind solving one, and ever since learning to code making a sudoku solver was an ambition. After beginning to familiarise myself with Typescript I thought it would be a good first project to build with with a basic HTML / CSS / Typescript stack, and a good chance to test my core programming principles and algorithmic thinking.",
+    cat: cats.prog,
+    size: cardSize.rect
+}
 
-
-var DataObjects = [sburrell2, trample, atl, jsanchez1, ggaletto1, tetris, sweeper, invoicedb, yam, tmh, dsmart2, dsmart1, wanderingwestduo, jharding2, jharding1, rwaugh1, rdelooze, dferg, abimp, met_you, hollow, alcatraz, forgive, ushuaia1, iceberg, ret, hangman, valetta_rose, santorini, mykonos1]
+var DataObjects = [sudoku_site, portfolio, sburrell2, trample, atl, jsanchez1, ggaletto1, tetris, sweeper, invoicedb, yam, tmh, dsmart2, dsmart1, wanderingwestduo, jharding2, jharding1, rwaugh1, rdelooze, dferg, abimp, met_you, hollow, alcatraz, forgive, ushuaia1, iceberg, ret, hangman, valetta_rose, santorini, mykonos1]
 
 var i = DataObjects.length;
 

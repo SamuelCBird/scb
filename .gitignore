@@ -23,5 +23,13 @@ yarn-debug.log*
 yarn-error.log*
 .eslintcache
 
+<<<<<<< HEAD
 # db stuff
 src/components/FirestoreSecret.js
+=======
+# firestore secret info
+/src/components/FirestoreSecret.js
+
+# content images
+/src/data_images
+>>>>>>> 1fe895ca0333c2b95dece5942ce92e9b70005c94
